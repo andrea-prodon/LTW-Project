@@ -1,5 +1,24 @@
-body {background-color:rgb(52, 140, 151)}
+.sfondo-pagina {background-color:rgb(52, 140, 151)}
 
-h2,h3 {
+.font-testo {
     font-size:23px; color:whitesmoke; font-family:arial
+}
+
+.colonna-sinistra{
+    text-align: left;
+    background-position: left;
+    width: 15%;
+    height: 100%;
+}
+
+.riga-altaTestoADestra{
+    text-align: right;
+    background-position: top;
+    height: 15%;
+    width: 100%;
+}
+
+.YouClothes{
+    color:#009900; font-size:50px; 
+                font-style:italic; text-align:left;
 }
