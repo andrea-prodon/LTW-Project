@@ -16,6 +16,17 @@
     width: 100%;
 }
 
+.colonna-centrale{
+    background-position: center;
+    height: 100%;
+    width: 33.33333%;
+}
+
+.labels {
+    width: 240px;
+    display: inline-block;
+}
+
 .YouClothes{
     color:whitesmoke; font-size:50px; 
                 font-style:italic; font-weight: 900;
