@@ -4,6 +4,20 @@
     font-size:23px; color:whitesmoke; font-family:arial
 }
 
+
+titolo {
+    font-weight: 600;
+    font-size: 50;
+    color: rgb(0, 0, 92); 
+    font-family: fantasy;
+}
+
+sottotitolo {
+    font-weight: 300;
+    font-size: 20;
+    color: rgb(0, 0, 120);  
+}
+
 .colonna-sinistra{  
     background-position: left;
     width: 15%;
