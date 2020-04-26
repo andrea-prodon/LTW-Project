@@ -1,0 +1,133 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="../stile.css" type="text/css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+
+        <title>YouClothes</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+
+    <body>
+
+        <br>
+        <!--titolo del sito-->
+        <div style="margin-bottom: 0px" align="center">
+            <titolo>YouClothes</titolo><br>
+            <sottotitolo>Compra e vendi i tuoi vestiti usati!</sottotitolo>
+        </div>
+        <br>
+
+        <!--
+            il tag nav di html rappresenta una sezione contenente link di navigazione
+            ho dunque creato una sezione nav aggiungengo dei parametri per fissarla in alto
+            e darle il colore scuro
+        -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
+
+            <!--
+                ho aggiunto questo bottone in modo tale che, quando la pagina viene stretta molto (come ad esempio nel caso
+                fossimo da mobile) viene creato un menu a bottone che quando premuto fa apparire uno scroll menu con gli 
+                stessi link presenti nella navigation bar
+                in questo caso data-toggle=collapse indica che deve apparire quando la pagina si stringe
+                e il data target è a quali dati deve fare riferimento quando viene premuto
+                infatti collapse_target indica il div successivo contenente tutti i link
+            -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--questo div è il principale contenuto della navigation bar, contiene i vari link presenti sulla nav-->
+            <div class="collapse navbar-collapse" id="collapse_target">
+
+                <!--semplice testo-->
+                <span class="navbar-text">YouClothes</span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <ul class="navbar-nav">
+
+                    <!--
+                        questo è un elemento dropdown ovvero un pulsante che quando premuto mostra un menu a tendina
+                        anche in questo caso il data-target indica i dati a cui fare riferimento quando premuto, ovvero
+                        in questo caso impostato sui link contenuti dal div successivo
+                        mentre data-toggle indica il tipo di tasto
+                    -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#dropdown_target" href="#">
+                            Menù
+                            <span class="caret"></span>
+                        </a>
+                        
+                        <div class="dropdown-menu"  aria-labelledby="dropdown_target" id="dropdown_target">
+                            <a class="dropdown-item">Il mio profilo</a>
+                            <a class="dropdown-item">Preferiti</a>
+                            <a class="dropdown-item">I miei annunci</a>
+                            <a class="dropdown-item">Logout</a>
+                        </div>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <!--altri link contenuti nella nav dopo il tasto dropdown-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Magliette</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pantaloni</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cappelli</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Felpe</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sciarpe</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Giacchetti</a>
+                    </li>
+
+                    <!--
+                        serie di spazi inserita soltanto per far apparire il login e sign up nella parte destra
+                        c'è sicuramente un altro modo piu corretto questa è soltanto una soluzione temporanea dato che
+                        al momento non sapevo come fare
+                    -->
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <!--e qui i link di login e sign up-->
+                    <div class="nav-item" align="right">
+                        <a class="nav-link" href="../Registrazione/login.html">Login</a>
+                    </div>
+                    <span class="navbar-text">/</span>
+
+                    <div class="nav-item" align="right">
+                        <a class="nav-link" href="../Registrazione/signup.html">Sign up</a>
+                    </div>
+
+                </ul>
+            </div>
+        </nav>       
+        
+
+        
+        
+    </body>
+
+</html>

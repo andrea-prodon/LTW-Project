@@ -1,0 +1,26 @@
+titolo {
+    font-weight: 600;
+    font-size: 50;
+    color: rgb(52, 58, 64); 
+    font-family: fantasy;
+}
+
+sottotitolo {
+    font-weight: 300;
+    font-size: 20;
+    color: rgb(52, 58, 64); 
+    font-family: fantasy;
+}
+
+.bordo {
+    width: device-width;
+    padding: 10px 20px;
+    border: 50px solid transparent;
+    border-color: rgb(52, 58, 64); ;
+}
+
+
+.labels {
+    width: 200px;
+    display: inline-block;
+}
