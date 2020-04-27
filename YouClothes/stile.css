@@ -1,10 +1,3 @@
-.sfondo-pagina {background-color:rgb(52, 140, 151)}
-
-.font-testo {
-    font-size:23px; color:whitesmoke; font-family:arial
-}
-
-
 titolo {
     font-weight: 600;
     font-size: 50;
@@ -19,12 +12,6 @@ sottotitolo {
     font-family: fantasy;
 }
 
-.colonna-sinistra{  
-    background-position: left;
-    width: 15%;
-    height: 100%;
-}
-
 .bordo {
     width: device-width;
     padding: 10px 20px;
@@ -33,40 +20,7 @@ sottotitolo {
 }
 
 
-.riga-alta{
-    background-position: top;
-    height: 15%;
-    width: 100%;
-}
-
-.colonna-centrale{
-    background-position: center;
-    height: 100%;
-    width: 33.33333%;
-}
-
 .labels {
     width: 200px;
     display: inline-block;
-}
-
-.YouClothes{
-    color:whitesmoke; font-size:50px; 
-    font-style:italic; font-weight: 900;
-}
-
-.alignleft {
-float: left;
-width:33.33333%;
-text-align:left;
-}
-.aligncenter {
-float: left;
-width:33.33333%;
-text-align:center;
-}
-.alignright {
-float: left;
-width:33.33333%;
-text-align:right;
 }
