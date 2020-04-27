@@ -10,40 +10,63 @@
         <title>Sign up</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--piccola validazione del form che controlla che nome e cognome non siano numeri e che le due password corrispondano-->
+        <script type="text/javascript">
+            function validaForm() {
+                var nameValue=parseInt(document.registrazione.nome.value);
+                if (!isNaN(nameValue)) {
+                    alert("il nome non può essere un numero!");
+                    return false;
+                }
+                var lastnameValue=parseInt(document.registrazione.cognome.value);
+                if (!isNaN(lastnameValue)) {
+                    alert("il cognome non può essere un numero!");
+                    return false;
+                }
+                var pass1=document.registrazione.password.value;
+                var pass2=document.registrazione.conferma_password.value;
+                if(pass1 != pass2) {
+                    alert("le password inserite non corrispondono");
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </head>
 
 
     <body class="bordo">
 
         
-        <form method="POST">
+        <form method="GET" action="signup-complete.html" id="registrazione" name="registrazione" onSubmit="validaForm()" enctype="multipart/form-data">
             <div class="titolo">
-                    <p align="center"> <br><br><br><br>
-                        <titolo>Sign up</titolo><br><br>
-                        <sottotitolo>
-                            <label for="name" class="labels">Nome</label>
-                            <input type="text" maxlength="20" required name="name"><br><br>
-                            
-                            <label for="cognome" class="labels">Cognome</label> 
-                            <input type="text" maxlength="20" required name="cognome"><br><br>
-                            
-                            <label for="nickname" class="labels">NickName</label>
-                            <input type="text" maxlength="20" required name="nickname"><br><br>
-                            
-                            <label for="email" class="labels">E-mail</label>
-                            <input type="email" maxlength="30" name="email" required><br><br>
-                            
-                            <label for="password" class="labels">Password</label>
-                            <input type="Password" maxlength="20" name="password" required><br><br>
-                            
-                            <label for="conferma_password" class="labels">Conferma Password</label>
-                            <input type="Password" maxlength="20" name="conferma_password" required><br><br><br>
-                        </sottotitolo>
-                            
-                        <a href="../Home/homepage.html">Annulla</a> &nbsp;&nbsp;&nbsp;   
-                        <input type="reset" value="Reset"> &nbsp;&nbsp; 
-                        <input type="submit" value="Conferma"> 
-                    </p>
+                <p align="center"> <br><br><br><br>
+                    <titolo>Sign up</titolo><br><br>
+                    <sottotitolo>
+                        <label for="nome" class="labels">Nome</label>
+                        <input type="text" maxlength="20" required name="nome" id="nome"><br><br>
+                        
+                        <label for="cognome" class="labels">Cognome</label> 
+                        <input type="text" maxlength="20" required name="cognome" id="cognome"><br><br>
+                        
+                        <label for="nickname" class="labels">NickName</label>
+                        <input type="text" maxlength="20" required name="nickname" id="nickname"><br><br>
+                        
+                        <label for="email" class="labels">E-mail</label>
+                        <input type="email" maxlength="30" name="email" id="email" required><br><br>
+                        
+                        <label for="password" class="labels">Password</label>
+                        <input type="Password" maxlength="20" name="password" id="password" required><br><br>
+                        
+                        <label for="conferma_password" class="labels">Conferma Password</label>
+                        <input type="Password" maxlength="20" name="conferma_password" id="conferma_password" required><br><br><br>
+                    </sottotitolo>
+                        
+                    <a href="../Home/homepage.html">Annulla</a> &nbsp;&nbsp;&nbsp;   
+                    <input type="reset" value="Reset"> &nbsp;&nbsp; 
+                    <input type="submit" value="Conferma"> 
+                </p>
             </div>
         </form>
 
