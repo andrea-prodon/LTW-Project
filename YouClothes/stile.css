@@ -46,9 +46,9 @@ sottotitolo {
 }
 
 #griglia li {
-    border: 5px solid #333333;
+    border: 5px solid rgb(52, 58, 64);
     display: inline-block;
     width: 270px;
     margin: 30px;
-    background: #333333;
+    background: rgb(52, 58, 64);
     }
