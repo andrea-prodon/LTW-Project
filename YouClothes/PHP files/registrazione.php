@@ -26,7 +26,7 @@
                 else{
                     //Operazioni per inserire i nuovi valori nel DB, tabella Utente -> registrazione nuovo Utente
                     $email=$_POST['email'];
-                    $nome=$_POST['name'];
+                    $nome=$_POST['nome'];
                     $cognome=$_POST['cognome'];
                     $nickname=$_POST['nickname'];
                     $password=$_POST['password'];  //md5 per 'ashare' le password in modo tale da non poterle vedere nel database
@@ -35,10 +35,33 @@
                     if($data){
                         //header("Location: URL da fare in futuro per reindirizzare in una pagina più consona");
                         //per adesso usiamo ciò che sta qui sotto
-                        echo "<h1>Registrazione Completata! 
-                        Inizia a usare il sito, 
-                        <a href=../Home/homepage.html>PREMI QUI </a>
-                        </h1>";
+                        echo "<html>
+
+                        <head>
+                            <link rel=stylesheet href=../stile.css type=text/css>
+                            <link rel=stylesheet href=../css/bootstrap.min.css>
+                            <link href=../css/bootstrap-responsive.css rel=stylesheet>
+                            <script src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+                            <script src=../js/bootstrap.min.js></script>
+                    
+                            <title>Sign up completed</title>
+                            <meta charset=utf-8>
+                            <meta name=viewport content=width=device-width, initial-scale=1>
+                        </head>
+                    
+                    
+                        <body class=bordo>
+                    
+                            <p align=center> <br><br><br><br>
+                                <titolo>Registrazione completata!</titolo> <br><br>
+                                <sottotitolo>Complimenti, registrazione effettuata con successo! </sottotitolo> <br>
+                                <sottotitolo> Clicca qui per tornare al menu principale: </sottotitolo> <br><br>
+                                <a href=../Home/homepage.html>Home</a>
+                            </p>
+                    
+                        </body>
+                    
+                    </html>";
                     }
                 }
             //}
