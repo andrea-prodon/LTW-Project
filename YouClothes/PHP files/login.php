@@ -41,7 +41,7 @@
         $q1 = "select * from utente where email=$1 and password=$2";
         $result = pg_query_params($dbconn,$q1,array($email,$pass));
         if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
-
+            /*
             echo "<html>
 
             <head>
@@ -58,14 +58,18 @@
                     <titolo>Hai appena effettuato il LOGIN!</titolo> <br><br>
                     <sottotitolo>
                         Premi
-                        <a href=../Home/homepage.html>QUI </a>
+                        <a href=../Home/homepage.php>QUI </a>
                         per iniziare ad usare il sito YouClothes!
                     </sottotitolo> <br><br>
                 </p>
         
             </body>
         
-        </html>";
+        </html>";*/
+            $q1 = "select * from utente where email=$1";
+            $result = pg_query_params($dbconn,$q1,array($email));
+            $line=pg_fetch_array($result,null,PGSQL_ASSOC);
+            header('location: ../Home/homepage.php?nickname='.$line["nickname"].'');
         }
         //se la password non è corretta
         else{
@@ -90,7 +94,7 @@
                     </sottotitolo><br><br>
                     <sottotitolo>
                         <a href=../Registrazione/login.html>RIPROVA LOGIN </a>&nbsp;&nbsp; 
-                        <a href=../Home/homepage.html>RITORNA AL SITO </a>&nbsp;&nbsp;
+                        <a href=../Home/homepage.php>RITORNA AL SITO </a>&nbsp;&nbsp;
                     <sottotitolo>
 
             </body>

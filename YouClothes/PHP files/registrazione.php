@@ -61,7 +61,7 @@
                             <titolo>Registrazione completata!</titolo> <br><br>
                             <sottotitolo>Complimenti, registrazione effettuata con successo! </sottotitolo> <br>
                             <sottotitolo> Clicca qui sotto per tornare al menu principale: </sottotitolo> <br><br>
-                            <a href=../Home/homepage.html>Home</a>
+                            <a href=../Home/homepage.php>Home</a>
                         </p>
                 
                     </body>
