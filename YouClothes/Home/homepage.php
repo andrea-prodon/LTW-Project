@@ -78,6 +78,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     <!--altri link contenuti nella nav dopo il tasto dropdown-->
+                    <!--Ho commentato perchè con Ajax bastano i bottoni, nel caso sentiamoci
                     <li class="nav-item">
                         <a class="nav-link" href="#">Magliette</a>
                     </li>
@@ -101,7 +102,25 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Giacchetti</a>
                     </li>
-
+                    -->
+                    <li class="nav-item">
+                        <button class="bottone">Magliette</bottone>
+                    </li>
+                    <li class="nav-item">
+                        <button class="bottone">Pantaloni</bottone>
+                    </li>
+                    <li class="nav-item">
+                        <button class="bottone">Cappelli</bottone>
+                    </li>
+                    <li class="nav-item">
+                        <button class="bottone">Felpe</bottone>
+                    </li>
+                    <li class="nav-item">
+                        <button class="bottone">Sciarpe</bottone>
+                    </li>
+                    <li class="nav-item">
+                        <button class="bottone">Giacchetti</bottone>
+                    </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
