@@ -41,31 +41,6 @@
         $q1 = "select * from utente where email=$1 and password=$2";
         $result = pg_query_params($dbconn,$q1,array($email,$pass));
         if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
-            /*
-            echo "<html>
-
-            <head>
-                <link rel=stylesheet href=../stile.css type=text/css>
-                <title>LOGIN EFFETTUATO</title>
-                <meta charset=utf-8>
-                <meta name=viewport content=width=device-width, initial-scale=1>
-            </head>
-        
-        
-            <body class=bordo>
-        
-                <p align=center> <br><br><br><br>
-                    <titolo>Hai appena effettuato il LOGIN!</titolo> <br><br>
-                    <sottotitolo>
-                        Premi
-                        <a href=../Home/homepage.php>QUI </a>
-                        per iniziare ad usare il sito YouClothes!
-                    </sottotitolo> <br><br>
-                </p>
-        
-            </body>
-        
-        </html>";*/
             $q1 = "select * from utente where email=$1";
             $result = pg_query_params($dbconn,$q1,array($email));
             $line=pg_fetch_array($result,null,PGSQL_ASSOC);
