@@ -41,14 +41,6 @@
         $q1 = "select * from utente where email=$1 and password=$2";
         $result = pg_query_params($dbconn,$q1,array($email,$pass));
         if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
-            /*echo "<h1>
-            Bene! Hai appena effettuato il Login! <br><br>
-            Premi 
-            <a href=../Home/homepage.html>QUI </a>
-            per iniziare a usare il sito YouClothes!
-            </h1>";*/
-
-            //
 
             echo "<html>
 
@@ -74,18 +66,9 @@
             </body>
         
         </html>";
-        //
         }
         //se la password non è corretta
         else{
-            /*echo "<h1>
-            La Password non è corretta! 
-            <br><br>
-            Scegliere una delle opzioni sottostanti: <br>
-            <a href=../Registrazione/login.html>RIPROVA LOGIN </a>&nbsp;&nbsp; 
-            <a href=../Home/homepage.html>RITORNA AL SITO </a>&nbsp;&nbsp;";
-            */
-            //
             echo "<html>
 
             <head>
@@ -112,7 +95,6 @@
 
             </body>
             </html>";
-            //
         }
     }
 ?>
