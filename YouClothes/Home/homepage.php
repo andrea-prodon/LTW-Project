@@ -7,6 +7,13 @@
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
 
+        <?php
+            //serve per controllare se qualcuno ha acceduto
+            if(isset($_GET['nickname'])){
+                $nickname=$_GET['nickname'];
+            }
+        ?>
+
         <title>YouClothes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,7 +123,29 @@
                     
                     
 
-                    <!--e qui i link di login e sign up-->
+                    <?php
+                        if(!(isset($_GET['nickname']))){    //se non hai effettuato l'accesso appare signup/register
+                            echo "
+                            <div class=nav-item align=right>
+                                <a class=nav-link href=../Registrazione/login.html>Login</a>
+                            </div>
+                            <span class=navbar-text>/</span>
+
+                            <div class=nav-item align=right>
+                                <a class=nav-link href=../Registrazione/signup.html>Sign up</a>
+                            </div>";
+                        }
+                        else{   //altrimenti appare il tuo nickname
+                            echo '
+                            <div class=nav-item align=right>
+                                <span class=navbar-text>PROFILO: '.$nickname.'</span>
+                            </div>';
+                        }
+                    
+                    ?>
+
+
+                    <!--e qui i link di login e sign up
                     <div class="nav-item" align="right">
                         <a class="nav-link" href="../Registrazione/login.html">Login</a>
                     </div>
@@ -124,7 +153,7 @@
 
                     <div class="nav-item" align="right">
                         <a class="nav-link" href="../Registrazione/signup.html">Sign up</a>
-                    </div>
+                    </div>-->
 
                 </ul>
             </div>
