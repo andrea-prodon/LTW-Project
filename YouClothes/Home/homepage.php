@@ -21,7 +21,6 @@
 
 
     <body>
-        <!-- CIAO ANDREA-->
         <br>
         <!--titolo del sito-->
         <div style="margin-bottom: 0px" align="center">
