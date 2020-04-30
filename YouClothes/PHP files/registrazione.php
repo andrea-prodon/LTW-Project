@@ -1,7 +1,7 @@
 <html>
     <body>
         <?php
-            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=pollopir")
+            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
             //controllo se utente esiste già
             $email = $_POST['email'];   //prendo il parametro 'email' della form inviata
@@ -61,7 +61,7 @@
                             <titolo>Registrazione completata!</titolo> <br><br>
                             <sottotitolo>Complimenti, registrazione effettuata con successo! </sottotitolo> <br>
                             <sottotitolo> Clicca qui sotto per tornare al menu principale: </sottotitolo> <br><br>
-                            <a href=../Home/homepage.html>Home</a>
+                            <a href=../Home/homepage.php>Home</a>
                         </p>
                 
                     </body>

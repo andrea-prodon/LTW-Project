@@ -1,5 +1,5 @@
 <?php
-     $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=pollopir")
+     $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
      or die('Could not connect: '.pg_last_error());
      $email = $_POST['email'];   //prendo il parametro 'email' della form inviata
      $q1 = "select * from utente where email=$1";  //il risultato della query viene inserito dentro $1
@@ -58,7 +58,7 @@
                     <titolo>Hai appena effettuato il LOGIN!</titolo> <br><br>
                     <sottotitolo>
                         Premi
-                        <a href=../Home/homepage.html>QUI </a>
+                        <a href=../Home/homepage.php>QUI </a>
                         per iniziare ad usare il sito YouClothes!
                     </sottotitolo> <br><br>
                 </p>
