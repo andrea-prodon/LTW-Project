@@ -1,5 +1,5 @@
 <?php
-     $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+     $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=pollopir")
      or die('Could not connect: '.pg_last_error());
      $email = $_POST['email'];   //prendo il parametro 'email' della form inviata
      $q1 = "select * from utente where email=$1";  //il risultato della query viene inserito dentro $1
