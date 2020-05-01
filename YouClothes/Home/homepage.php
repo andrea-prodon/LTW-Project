@@ -6,6 +6,8 @@
         <link href="../css/bootstrap-responsive.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/script_1.js">
+        </script>
 
         <?php
             //serve per controllare se qualcuno ha acceduto
@@ -25,7 +27,8 @@
         <!--titolo del sito-->
         <div style="margin-bottom: 0px" align="center">
             <titolo>YouClothes</titolo><br>
-            <sottotitolo>Compra e vendi i tuoi vestiti usati!</sottotitolo>
+            <sottotitolo>Compra e vendi i tuoi vestiti usati!
+            </sottotitolo>
         </div>
         <br>
 
@@ -104,22 +107,22 @@
                     </li>
                     -->
                     <li class="nav-item">
-                        <button class="bottone">Magliette</bottone>
+                        <button class="bottone" onclick="return caricaDocumento();">Magliette</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone">Pantaloni</bottone>
+                        <button class="bottone" onclick="return caricaDocumento();">Pantaloni</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone">Cappelli</bottone>
+                        <button class="bottone" onclick="return caricaDocumento();">Cappelli</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone">Felpe</bottone>
+                        <button class="bottone" onclick="return caricaDocumento();">Felpe</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone">Sciarpe</bottone>
+                        <button class="bottone" onclick="return caricaDocumento();">Sciarpe</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone">Giacchetti</bottone>
+                        <button class="bottone" onclick="return caricaDocumento();">Giacchetti</bottone>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -181,26 +184,27 @@
 
         
         <div id="container">
-            <ul id="griglia">
-                
-                <li><img src="../foto vestiti/felpa.jpg" width="250" height="250"><p>Felpa</p></li>
-                <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>T-shirt star wars</p></li>
-                <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>Polo</p></li>
-                <li><img src="../foto vestiti/giacchetto pelle.jpg"width="250" height="250"><p>Giacchetto di pelle</p></li>
-                <li><img src="../foto vestiti/jeans.jpg"width="250" height="250"><p>Jeans</p></li>
-                <li><img src="../foto vestiti/giaccone.jpg"width="250" height="250"><p>Giaccone</p></li>
-                <li><img src="../foto vestiti/maglietta gialla e nera.jpg"width="250" height="250"><p>T-shirt gialla e nera</p></li>
-                <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
-                <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
-                <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
-                <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
-                <li><img src="../foto vestiti/giaccone.jpg"width="250" height="250"><p>t-shirt</p></li>
-                <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
-                <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
-                <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
+            <div id="parteDinamica">
+                <ul id="griglia">
+                    
+                    <li><img src="../foto vestiti/felpa.jpg" width="250" height="250"><p>Felpa</p></li>
+                    <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>T-shirt star wars</p></li>
+                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>Polo</p></li>
+                    <li><img src="../foto vestiti/giacchetto pelle.jpg"width="250" height="250"><p>Giacchetto di pelle</p></li>
+                    <li><img src="../foto vestiti/jeans.jpg"width="250" height="250"><p>Jeans</p></li>
+                    <li><img src="../foto vestiti/giaccone.jpg"width="250" height="250"><p>Giaccone</p></li>
+                    <li><img src="../foto vestiti/maglietta gialla e nera.jpg"width="250" height="250"><p>T-shirt gialla e nera</p></li>
+                    <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
+                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
+                    <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
+                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
+                    <li><img src="../foto vestiti/giaccone.jpg"width="250" height="250"><p>t-shirt</p></li>
+                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
+                    <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
+                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
+                </ul>
 
-
-            </ul>
+            </div>
         </div>
         
 
