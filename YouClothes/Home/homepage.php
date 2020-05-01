@@ -107,7 +107,7 @@
                     </li>
                     -->
                     <li class="nav-item">
-                        <button id="1" class="bottone" onclick="return caricaDocumentoMaglietta();">Magliette</bottone>
+                        <button id="1" class="bottone" onclick="return caricaDocumentoMaglietta();">Magliette</bottone> <!-- al click della categoria chiama la funzione all'interno della cartella /js/script_1.js -->
                     </li>
                     <li class="nav-item">
                         <button class="bottone" onclick="return caricaDocumentoPantalone();">Pantaloni</bottone>
@@ -145,6 +145,7 @@
                     
 
                     <?php
+                        //questa parte serve per far apparire o login/signup in caso non è stato effettuato l'accesso oppure il nickname di colui che ha effettuato l'accesso
                         if(!(isset($_GET['nickname']))){    //se non hai effettuato l'accesso appare signup/register
                             echo "
                             <div class=nav-item align=right>
@@ -165,7 +166,7 @@
                     
                     ?>
 
-
+                    <!-- questa parte è stata sostuita da quella sopra-->
                     <!--e qui i link di login e sign up
                     <div class="nav-item" align="right">
                         <a class="nav-link" href="../Registrazione/login.html">Login</a>
@@ -181,9 +182,9 @@
         </nav>       
         
 
-        
+        <!-- Forse da cambiare per renderla dinamica o direttamente eliminare questa parte tanto abbiamo fatto le categorie dinamiche-->
         <div id="container">
-            <div id="parteDinamica">
+            <div id="parteDinamica"> <!-- inizio parte dinamica -->
                 <ul id="griglia">
                     
                     <li><img src="../foto vestiti/felpa.jpg" width="250" height="250"><p>Felpa</p></li>
@@ -192,7 +193,7 @@
                     <li><img src="../foto vestiti/giacchetto pelle.jpg"width="250" height="250"><p>Giacchetto di pelle</p></li>
                     <li><img src="../foto vestiti/jeans.jpg"width="250" height="250"><p>Jeans</p></li>
                     <li><img src="../foto vestiti/giaccone.jpg"width="250" height="250"><p>Giaccone</p></li>
-                    <!--<li><img src="../foto vestiti/maglietta gialla e nera.jpg"width="250" height="250"><p>T-shirt gialla e nera</p></li>-->
+                    <li><img src="../foto vestiti/maglietta gialla e nera.jpg"width="250" height="250"><p>T-shirt gialla e nera</p></li>
                     <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
                     <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
                     <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
@@ -203,7 +204,7 @@
                     <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
                 </ul>
 
-            </div>
+            </div>  <!-- fine parte dinamica -->
         </div>
         
 
