@@ -1,7 +1,37 @@
-function caricaDocumento(evento){
+function caricaDocumentoMaglietta(evento){
     var richiesta = new XMLHttpRequest();
     richiesta.onreadystatechange = gestisciRisposta;
-    richiesta.open("GET",'paginaAnnunci.html',true); //carica prova.html nella parte di testo che decido di modificare che sarebbe ciò che c'è dentro "parteDinamica"
+    richiesta.open("GET",'paginaAnnunci.php?nome=maglietta',true); //carica prova.html nella parte di testo che decido di modificare che sarebbe ciò che c'è dentro "parteDinamica"
+    richiesta.send(null);
+}
+function caricaDocumentoPantalone(evento){
+    var richiesta = new XMLHttpRequest();
+    richiesta.onreadystatechange = gestisciRisposta;
+    richiesta.open("GET",'paginaAnnunci.php?nome=pantalone',true); //carica prova.html nella parte di testo che decido di modificare che sarebbe ciò che c'è dentro "parteDinamica"
+    richiesta.send(null);
+}
+function caricaDocumentoCappello(evento){
+    var richiesta = new XMLHttpRequest();
+    richiesta.onreadystatechange = gestisciRisposta;
+    richiesta.open("GET",'paginaAnnunci.php?nome=cappello',true); //carica prova.html nella parte di testo che decido di modificare che sarebbe ciò che c'è dentro "parteDinamica"
+    richiesta.send(null);
+}
+function caricaDocumentoFelpa(evento){
+    var richiesta = new XMLHttpRequest();
+    richiesta.onreadystatechange = gestisciRisposta;
+    richiesta.open("GET",'paginaAnnunci.php?nome=felpa',true); //carica prova.html nella parte di testo che decido di modificare che sarebbe ciò che c'è dentro "parteDinamica"
+    richiesta.send(null);
+}
+function caricaDocumentoSciarpa(evento){
+    var richiesta = new XMLHttpRequest();
+    richiesta.onreadystatechange = gestisciRisposta;
+    richiesta.open("GET",'paginaAnnunci.php?nome=sciarpa',true); //carica prova.html nella parte di testo che decido di modificare che sarebbe ciò che c'è dentro "parteDinamica"
+    richiesta.send(null);
+}
+function caricaDocumentoGiacchetto(evento){
+    var richiesta = new XMLHttpRequest();
+    richiesta.onreadystatechange = gestisciRisposta;
+    richiesta.open("GET",'paginaAnnunci.php?nome=giacchetto',true); //carica prova.html nella parte di testo che decido di modificare che sarebbe ciò che c'è dentro "parteDinamica"
     richiesta.send(null);
 }
 

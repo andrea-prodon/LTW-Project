@@ -107,22 +107,22 @@
                     </li>
                     -->
                     <li class="nav-item">
-                        <button class="bottone" onclick="return caricaDocumento();">Magliette</bottone>
+                        <button id="1" class="bottone" onclick="return caricaDocumentoMaglietta();">Magliette</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone" onclick="return caricaDocumento();">Pantaloni</bottone>
+                        <button class="bottone" onclick="return caricaDocumentoPantalone();">Pantaloni</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone" onclick="return caricaDocumento();">Cappelli</bottone>
+                        <button id="2" class="bottone" onclick="return caricaDocumentoCappello();">Cappelli</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone" onclick="return caricaDocumento();">Felpe</bottone>
+                        <button id="3" class="bottone" onclick="return caricaDocumentoFelpa();">Felpe</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone" onclick="return caricaDocumento();">Sciarpe</bottone>
+                        <button id="4" class="bottone" onclick="return caricaDocumentoSciarpa();">Sciarpe</bottone>
                     </li>
                     <li class="nav-item">
-                        <button class="bottone" onclick="return caricaDocumento();">Giacchetti</bottone>
+                        <button id="5" class="bottone" onclick="return caricaDocumentoGiacchetto();">Giacchetti</bottone>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -193,7 +193,7 @@
                     <li><img src="../foto vestiti/giacchetto pelle.jpg"width="250" height="250"><p>Giacchetto di pelle</p></li>
                     <li><img src="../foto vestiti/jeans.jpg"width="250" height="250"><p>Jeans</p></li>
                     <li><img src="../foto vestiti/giaccone.jpg"width="250" height="250"><p>Giaccone</p></li>
-                    <li><img src="../foto vestiti/maglietta gialla e nera.jpg"width="250" height="250"><p>T-shirt gialla e nera</p></li>
+                    <!--<li><img src="../foto vestiti/maglietta gialla e nera.jpg"width="250" height="250"><p>T-shirt gialla e nera</p></li>-->
                     <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
                     <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
                     <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
