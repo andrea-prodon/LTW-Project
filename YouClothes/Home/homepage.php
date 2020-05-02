@@ -6,8 +6,7 @@
         <link href="../css/bootstrap-responsive.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/script_1.js">
-        </script>
+        <script src="../js/script_1.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
         <?php
