@@ -20,10 +20,34 @@
         <div class="titolo">
             <p align="center"> <br><br><br><br>
                 <titolo>Crea un nuovo annuncio</titolo><br><br>
-                    
             </p>
         </div>
-        
+
+        <form method="POST" action="../PHP files/creapost.php" id="creazionepost" name="creazionepost"enctype="multipart/form-data">
+            <p align="center">
+                <sottotitolo>
+                    <label for="nomepost" class="labels">Titolo: </label>
+                    <input type="text" maxlength="50" required name="nomepost" id="nomepost"><br><br>     
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="foto" class="labels" >Foto:</label>
+                    <input type="file" name="foto" id="foto"><br><br>
+                
+                    <label for="categoria" class="labels" style="text-align: left;">Categoria:</label>
+                    <select name="categoria" >
+                        <option></option>
+                        <option value="maglietta">maglietta</option>
+                        <option value="pantalone">pantalone</option>
+                        <option value="cappello">cappello</option>
+                        <option value="felpa">felpa</option>
+                        <option value="giacchetto">giacchetto</option>
+                    </select>  <br><br>
+
+                    <label for="descrizione" class="labels">Descrizione: </label>
+                    <textarea cols=20 rows="2" wrap="phisical" name="descrizione" id="descrizione"></textarea>
+                </sottotitolo>
+            </p>
+
+        </form>
 
         
     </body>
