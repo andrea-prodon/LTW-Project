@@ -1,6 +1,5 @@
 <html>
     <head>
-        <title>CONNESSIONE COL DB</title>
         <style>
             /*Per fare i bordi come un'unica linea*/
             table, td, th {

@@ -8,6 +8,7 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/script_1.js">
         </script>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
         <?php
             //serve per controllare se qualcuno ha acceduto
@@ -105,24 +106,25 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Giacchetti</a>
                     </li>
+                    onclick="return caricaDocumentoMaglietta();"
                     -->
                     <li class="nav-item">
-                        <button id="1" class="bottone" onclick="return caricaDocumentoMaglietta();">Magliette</bottone> <!-- al click della categoria chiama la funzione all'interno della cartella /js/script_1.js -->
+                        <button id="1" class="bottone" name="maglietta">Magliette</bottone> <!-- al click della categoria chiama la funzione all'interno della cartella /js/script_1.js -->
                     </li>
                     <li class="nav-item">
-                        <button class="bottone" onclick="return caricaDocumentoPantalone();">Pantaloni</bottone>
+                        <button class="bottone" name="pantalone">Pantaloni</bottone>
                     </li>
                     <li class="nav-item">
-                        <button id="2" class="bottone" onclick="return caricaDocumentoCappello();">Cappelli</bottone>
+                        <button id="2" class="bottone" name="cappello">Cappelli</bottone>
                     </li>
                     <li class="nav-item">
-                        <button id="3" class="bottone" onclick="return caricaDocumentoFelpa();">Felpe</bottone>
+                        <button id="3" class="bottone" name="felpa">Felpe</bottone>
                     </li>
                     <li class="nav-item">
-                        <button id="4" class="bottone" onclick="return caricaDocumentoSciarpa();">Sciarpe</bottone>
+                        <button id="4" class="bottone" name="sciarpa">Sciarpe</bottone>
                     </li>
                     <li class="nav-item">
-                        <button id="5" class="bottone" onclick="return caricaDocumentoGiacchetto();">Giacchetti</bottone>
+                        <button id="5" class="bottone" name="giacchetto">Giacchetti</bottone>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -215,8 +217,19 @@
 
 
 
-
-
+        <!-- script JQuery -->
+        <script>
+            $(document).ready(function(){
+                $("#1").click(function(){
+                    var categoria = $(this).attr("name");
+                    var url = "paginaAnnunci.php?nome=";
+                    categoria = String(categoria);
+                    url = url.concat(categoria);
+                    $("#parteDinamica").load(''+url);
+                });
+            });
+        </script>
+        <!-- fine script JQuery -->
 
 
 
