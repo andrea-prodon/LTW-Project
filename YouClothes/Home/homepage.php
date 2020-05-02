@@ -112,7 +112,7 @@
                         <button id="1" class="bottone" name="maglietta">Magliette</bottone> <!-- al click della categoria chiama la funzione all'interno della cartella /js/script_1.js -->
                     </li>
                     <li class="nav-item">
-                        <button class="bottone" name="pantalone">Pantaloni</bottone>
+                        <button id="6" class="bottone" name="pantalone">Pantaloni</bottone>
                     </li>
                     <li class="nav-item">
                         <button id="2" class="bottone" name="cappello">Cappelli</bottone>
@@ -220,7 +220,7 @@
         <!-- script JQuery -->
         <script>
             $(document).ready(function(){
-                $("#1").click(function(){
+                $("#1,#2,#3,#4,#5,#6").click(function(){
                     var categoria = $(this).attr("name");
                     var url = "paginaAnnunci.php?nome=";
                     categoria = String(categoria);
