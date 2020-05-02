@@ -28,12 +28,17 @@
                 <sottotitolo>
                     <label for="nomepost" class="labels">Titolo: </label>
                     <input type="text" maxlength="50" required name="nomepost" id="nomepost"><br><br>     
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
                     <label for="foto" class="labels" >Foto:</label>
+                    <input type="text" maxlength="100" required name="foto" id="foto"><br><br>     
+                    
+                    <!--
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="file" name="foto" id="foto"><br><br>
+                    -->
                 
                     <label for="categoria" class="labels" style="text-align: left;">Categoria:</label>
-                    <select name="categoria" >
+                    <select name="categoria" id="categoria">
                         <option></option>
                         <option value="maglietta">maglietta</option>
                         <option value="pantalone">pantalone</option>
@@ -43,8 +48,15 @@
                     </select>  <br><br>
 
                     <label for="descrizione" class="labels">Descrizione: </label>
-                    <textarea cols=20 rows="2" wrap="phisical" name="descrizione" id="descrizione"></textarea>
+                    <textarea cols=20 rows="2" wrap="phisical" name="descrizione" id="descrizione"></textarea> <br><br>
+
+                    <label for="prezzo" class="labels">Prezzo: </label>
+                    <input type="number" name="prezzo" id="prezzo"> <br><br>
+
                 </sottotitolo>
+
+                <input type="reset" value="Reset"> &nbsp;&nbsp; 
+                <input type="submit" value="Conferma"> 
             </p>
 
         </form>
