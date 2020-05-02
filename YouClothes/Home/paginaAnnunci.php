@@ -1,16 +1,16 @@
 <html>
     <head>
         <style>
-        /*Per fare i bordi come un'unica linea*/
-        table, td, th {
-        border: 1px solid black;
-        }
+            /*Per fare i bordi come un'unica linea*/
+            table, td, th {
+            border: 1px solid black;
+            }
 
-        /*per non separare i bordi tra loro*/
-        #table2 {
-        border-collapse: collapse;
-        }
-</style>
+            /*per non separare i bordi tra loro*/
+            #table2 {
+            border-collapse: collapse;
+            }
+    </style>
     </head>
     <body>
         <?php
@@ -18,7 +18,7 @@
             $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
             $j=0;
             $i=0;
-            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect:' .pg_last_error());
             $query = "SELECT * FROM annuncio where categoria='$categoria'"; //query per ottenere la categoria prodotti scelta
             $result = pg_query($query) or die('Query failed '.pg_last_error());
