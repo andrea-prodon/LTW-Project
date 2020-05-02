@@ -1,4 +1,4 @@
-function caricaDocumentoMaglietta(evento){
+/*function caricaDocumentoMaglietta(evento){
     var richiesta = new XMLHttpRequest();
     richiesta.onreadystatechange = gestisciRisposta;
     richiesta.open("GET",'paginaAnnunci.php?nome=maglietta',true); //carica paginaAnnunci.php con passaggio di parametro maglietta nella parte di testo che decido di modificare che sarebbe ciò che c'è dentro "parteDinamica"
@@ -41,4 +41,4 @@ function gestisciRisposta(evento){
         //e la modifico a mio piacimento. In questo caso con 'e.target.responseText' sostituisco l'inner con l'inner dell'evento che ha chiamato questa funzione
         document.getElementById("parteDinamica").innerHTML = evento.target.responseText;
     }
-}
+}*/
