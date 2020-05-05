@@ -209,15 +209,8 @@
 
             </div>  <!-- fine parte dinamica -->
         </div>
+     
         
-
-
-
-
-
-
-
-
         <!-- script JQuery -->
         <script>
             $(document).ready(function(){
@@ -233,9 +226,6 @@
         <!-- fine script JQuery -->
 
 
-
-        
-        
     </body>
 
 </html>

@@ -6,7 +6,7 @@
             }
             td, th {
                 border:1px solid black;
-                padding:20px;
+                padding:25px;
             }
         </style>
         
@@ -28,7 +28,7 @@
                     if($i!=0){
                         echo "<tr>";
                         if($i==1){
-                            echo '<td width=250 rowspan=6> <img src="'.$colvalue.'" style=width:100%;></td></tr>';
+                            echo '<td width=250 rowspan=6> <img src="'.$colvalue.'" style=width=300px height=300px;></td></tr>';
                             $i=$i+1;
                         }
                         else{
