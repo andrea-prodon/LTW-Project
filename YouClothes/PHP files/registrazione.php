@@ -42,7 +42,7 @@
                 </html>";
             }
             //controllo che l'utente non abbia messo un nickname già esistente
-            else if(sizeof($line2)>0){
+            else if($line2){
                 echo "<html>
 
                     <head>
