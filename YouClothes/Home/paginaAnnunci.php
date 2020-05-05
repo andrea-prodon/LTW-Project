@@ -1,16 +1,15 @@
 <html>
     <head>
         <style>
-            /*Per fare i bordi come un'unica linea*/
-            table, td, th {
-            border: 1px solid black;
+            table {
+                border-collapse:collapse;
             }
-
-            /*per non separare i bordi tra loro*/
-            #table2 {
-            border-collapse: collapse;
+            td, th {
+                border:1px solid black;
+                padding:20px;
             }
-    </style>
+        </style>
+        
     </head>
     <body>
         <?php
@@ -23,14 +22,13 @@
             $query = "SELECT * FROM annuncio where categoria='$categoria'"; //query per ottenere la categoria prodotti scelta
             $result = pg_query($query) or die('Query failed '.pg_last_error());
             //Iniziamo a printare i dati prelevati dal DB
-            echo "<table id=table2 style=border:1px solid black;margin-left:auto;margin-right:auto; >\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
+            echo "<table>\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
             while ($line = pg_fetch_array($result,null,PGSQL_ASSOC)) {  //dentro a questo while creo righe della tabella in base a quanti annunci della categoria richiesta sono presenti
                 foreach ($line as $colvalue){
                     if($i!=0){
                         echo "<tr>";
                         if($i==1){
-                            echo '<td width=250 rowspan=6>
-                            <img src="'.$colvalue.'" style=width:100%;></td></tr>';
+                            echo '<td width=250 rowspan=6> <img src="'.$colvalue.'" style=width:100%;></td></tr>';
                             $i=$i+1;
                         }
                         else{
@@ -47,8 +45,9 @@
                         $i=$i+1;
                     }
                 }
-                echo "<td><span style=color:lime;>DISPONIBILE</span></td></tr>"; //da cambiare ovvero vedere se veramente è disponibile o no 
-                echo "<td><button>ACQUISTA</button></td></tr>"; //anche qui da rendere o no disponibile all'acquisto
+                echo "<tr><td><span style=color:lime;>DISPONIBILE</span></td></tr>"; //da cambiare ovvero vedere se veramente è disponibile o no 
+                echo "<tr><td><button>ACQUISTA</button></td></tr>"; //anche qui da rendere o no disponibile all'acquisto
+                echo "<br>";
             }
             echo "</table>\n";
             pg_free_result($result);
