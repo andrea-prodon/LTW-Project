@@ -186,7 +186,7 @@
         
 
         <!-- Forse da cambiare per renderla dinamica o direttamente eliminare questa parte tanto abbiamo fatto le categorie dinamiche-->
-        <div id="container">
+        <div id="container" style=background-color:white;>
             <div id="parteDinamica"> <!-- inizio parte dinamica -->
                 <ul id="griglia">
                     

@@ -22,7 +22,7 @@
             $query = "SELECT * FROM annuncio where categoria='$categoria'"; //query per ottenere la categoria prodotti scelta
             $result = pg_query($query) or die('Query failed '.pg_last_error());
             //Iniziamo a printare i dati prelevati dal DB
-            echo "<table>\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
+            echo "<table align='center'>\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
             while ($line = pg_fetch_array($result,null,PGSQL_ASSOC)) {  //dentro a questo while creo righe della tabella in base a quanti annunci della categoria richiesta sono presenti
                 foreach ($line as $colvalue){
                     if($i!=0){
