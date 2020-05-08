@@ -37,7 +37,7 @@
     //se esiste utente con 'email', allora controllo se la password è corretta
     else{
         $email = $_POST['email'];
-        $pass = $_POST['password'];
+        $pass = md5($_POST['password']);
         $q1 = "select * from utente where email=$1 and password=$2";
         $result = pg_query_params($dbconn,$q1,array($email,$pass));
         if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){

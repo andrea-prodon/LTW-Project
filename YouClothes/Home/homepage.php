@@ -77,7 +77,7 @@
                             <a class="dropdown-item" href="../ProfiloUtente/mioprofilo.php?nickname=<?php echo $nickname;?>">Il mio profilo</a>
                             <a class="dropdown-item">Preferiti</a>
                             <a class="dropdown-item">I miei annunci</a>
-                            <a class="dropdown-item">Logout</a>
+                            <a class="dropdown-item" href="homepage.php">Logout</a>
                         </div>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
