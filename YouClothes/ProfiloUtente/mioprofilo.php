@@ -41,7 +41,8 @@
                     Email: $email<br><br>
                     Data di nascita: $datanascita<br><br>
                     Città: $citta<br><br>
-                </sottotitolo><br><br>
+                </sottotitolo><br>
+                <a href=../Home/homepage.php>Indietro</a>&nbsp;&nbsp;
 
         </body>
         </html>"; 
