@@ -16,6 +16,8 @@
             $nome=$line["nome"];
             $cognome=$line["cognome"];
             $email=$line["email"];
+            $citta=$line["citta"];
+            $datanascita=$line["dataNascita"];
         }
         echo "<html>
 
@@ -32,11 +34,13 @@
             <p align=center><br><br><br>
                 <titolo>
                     Il tuo profilo:
-                </titolo><br><br><br>
+                </titolo><br><br><br><br>
                 <sottotitolo>
                     Nome: $nome<br><br>
                     Cognome: $cognome<br><br>
                     Email: $email<br><br>
+                    Data di nascita: $datanascita<br><br>
+                    Città: $citta<br><br>
                 </sottotitolo><br><br>
 
         </body>
