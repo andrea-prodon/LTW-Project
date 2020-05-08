@@ -80,7 +80,7 @@
                 $nickname=$_POST['nickname'];
                 $datanascita=$_POST['dataNascita'];
                 $citta=$_POST['citta'];
-                $password=$_POST['password'];  //md5 per 'ashare' le password in modo tale da non poterle vedere nel database
+                $password=md5($_POST['password']);  //md5 per 'ashare' le password in modo tale da non poterle vedere nel database
                 $q2="insert into utente values ($1,$2,$3,$4,$5,$6,$7)";   //query per inserire valori all'interno della tabella Utente
                 $data=pg_query_params($dbconn,$q2,array($email,$nome,$cognome,$nickname,$password, $datanascita, $citta));   //operazione per effettuare la query e inserire i dati all'interno di 'array'
                 if($data){
