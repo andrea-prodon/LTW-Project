@@ -157,12 +157,12 @@
                         else{
                             echo "
                             <div class=nav-item align=right>
-                                <a class=nav-link href=../Registrazione/login.html>Login</a>
+                                <a class=nav-link href=../Registrazione/login.php>Login</a>
                             </div>
                             <span class=navbar-text>/</span>
 
                             <div class=nav-item align=right>
-                                <a class=nav-link href=../Registrazione/signup.html>Sign up</a>
+                                <a class=nav-link href=../Registrazione/signup.php>Sign up</a>
                             </div>
                             ";    
                         }
@@ -214,12 +214,20 @@
         <!-- script JQuery -->
         <script>
             $(document).ready(function(){
-                $("#1,#2,#3,#4,#5,#6").click(function(){
-                    var categoria = $(this).attr("name");
-                    var url = "paginaAnnunci.php?nome=";
-                    categoria = String(categoria);
-                    url = url.concat(categoria);
-                    $("#parteDinamica").load(''+url);
+                $("#1,#2,#3,#4,#5,#6").on({ //event handler concatenati
+                    click:function(){
+                        var categoria = $(this).attr("name");
+                        var url = "paginaAnnunci.php?nome=";
+                        categoria = String(categoria);
+                        url = url.concat(categoria);
+                        $("#parteDinamica").load(''+url);
+                    },
+                    mouseenter: function(){	//quando il mouse punta su questi elemento
+                        $(this).css("background-color", "lightblue");
+                    },
+                    mouseleave: function(){ //quando il mouse non punta più su questi elemento
+                        $(this).css("background-color","#4CAF50");
+                    }
                 });
             });
         </script>

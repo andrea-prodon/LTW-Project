@@ -67,8 +67,8 @@
                 </sottotitolo><br><br>
                 <sottotitolo>
                     <a href=../Home/homepage.php>RITORNA AL SITO</a>&nbsp;&nbsp;
-                    <a href=../Registrazione/login.html>EFFETTUA L'ACCESSO</a>&nbsp;&nbsp; 
-                    <a href=../Registrazione/signup.html>REGISTRATI</a>&nbsp;&nbsp; 
+                    <a href=../Registrazione/login.php>EFFETTUA L'ACCESSO</a>&nbsp;&nbsp; 
+                    <a href=../Registrazione/signup.php>REGISTRATI</a>&nbsp;&nbsp; 
                 <sottotitolo>
 
         </body>

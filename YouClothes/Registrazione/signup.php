@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    //controllo se è già stata fatta la registrazione, in questo modo non posso accedere a questa pagina se ho già effettuato la registrazione
+    if(isset($_SESSION["nickname"])){
+        header('location: ../Home/homepage.php');
+    }
+?>
 <html>
 
     <head>
@@ -69,14 +76,11 @@
                         <input type="Password" maxlength="20" name="conferma_password" id="conferma_password" required><br><br><br>
                     </sottotitolo>
                         
-                    <button onclick="window.location.href = '../Home/homepage.php';">Annulla</button> &nbsp;&nbsp;
                     <input type="reset" value="Reset"> &nbsp;&nbsp; 
-                    <input type="submit" value="Conferma"> 
+                    <input type="submit" name="registerButton" value="Conferma"> 
                 </p>
             </div>
         </form>
-
-        
     </body>
 
 </html>

@@ -4,7 +4,9 @@
             session_start();    //serve sempre quando vuoi ricavare qualcosa dalla sessione (quindi lo devi inserire in tutte quelle pagine in cui vuoi accedere alla sessione)
             $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
-            //controllo se utente esiste già
+            if(!(isset($_POST['registerButton']))){   //questa pagina può essere acceduta solo se si preme il tasto 'Login' e non da URL
+                header('location: ../Home/homepage.php');
+            }
             $email = $_POST['email'];   //prendo il parametro 'email' della form inviata
             $q1 = "select * from utente where email=$1";  //il risultato della query viene inserito dentro $1
             $result = pg_query_params($dbconn,$q1,array($email));   //funzione per far effettuare le query e inserire i risultati dentro array (in questo caso solo 1: email)
@@ -31,10 +33,10 @@
                         <p align=center> <br><br><br><br>
                             <titolo>Operazione Annullata! Questo Utente esiste già!</titolo> <br><br>
                             <sottotitolo>Clicca 
-                            <a href=../Registrazione/login.html>QUI</a> 
+                            <a href=../Registrazione/login.php>QUI</a> 
                             per effettuare il login </sottotitolo> <br>
                             <sottotitolo>Clicca 
-                            <a href=../Registrazione/signup.html>QUI</a> 
+                            <a href=../Registrazione/signup.php>QUI</a> 
                             per ri-effettuare la registrazione </sottotitolo> <br>
                         </p>
                 
@@ -59,10 +61,10 @@
                         <p align=center> <br><br><br><br>
                             <titolo>Operazione Annullata! Questo nickname esiste già!</titolo> <br><br>
                             <sottotitolo>Clicca 
-                            <a href=../Registrazione/login.html>QUI</a> 
+                            <a href=../Registrazione/login.php>QUI</a> 
                             per effettuare il login </sottotitolo> <br>
                             <sottotitolo>Clicca 
-                            <a href=../Registrazione/signup.html>QUI</a> 
+                            <a href=../Registrazione/signup.php>QUI</a> 
                             per ri-effettuare la registrazione con un NICKNAME diverso </sottotitolo> <br><br>
                             <sottotitolo>
                                 <a href=../Home/homepage.php>TORNA IN HOME</a>

@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    //controlla se è già stato fatto il login e nel caso non posso più accedere a questa pagina ancora
+    if(isset($_SESSION["nickname"])){
+        header('location: ../Home/homepage.php');
+    }
+?>
 <html>
 
     <head>
@@ -30,14 +37,11 @@
                             
                         </sottotitolo>
                             
-                        <button onclick="window.location.href = '../Home/homepage.php';">Annulla</button> &nbsp;&nbsp;
                         <input type="reset" value="Reset"> &nbsp;&nbsp; 
-                        <input type="submit" value="Conferma"> 
+                        <input type="submit" name="loginButton" value="Conferma"> 
                     </p>
             </div>
         </form>
-
-        
     </body>
 
 </html>
