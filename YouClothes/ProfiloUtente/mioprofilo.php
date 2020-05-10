@@ -1,6 +1,6 @@
 <?php
     session_set_cookie_params(0);   //così quando chiudo la pagina la sessione si chiude
-    session_start();
+    session_start();    //serve sempre quando vuoi ricavare qualcosa dalla sessione (quindi lo devi inserire in tutte quelle pagine in cui vuoi accedere alla sessione)
     if (isset($_SESSION["nickname"])) {
         $nickname=$_SESSION["nickname"];
         $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")

@@ -13,8 +13,7 @@
 
         <?php
             //inizio sessione
-            session_set_cookie_params(0);   //così quando chiudo la pagina la sessione si chiude
-            session_start();
+            session_start();    //serve sempre quando vuoi ricavare qualcosa dalla sessione (quindi lo devi inserire in tutte quelle pagine in cui vuoi accedere alla sessione)
         ?>
 
         <title>YouClothes</title>
