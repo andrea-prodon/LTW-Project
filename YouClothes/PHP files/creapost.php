@@ -4,7 +4,7 @@
 
         // pagina per inserire i dettagli di un annuncio creato nel database
         
-            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
 
             $nomepost=$_POST['nomepost'];

@@ -1,5 +1,7 @@
 <?php
-     $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+    session_set_cookie_params(0);   //così quando chiudo la pagina la sessione si chiude
+    session_start();
+     $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
      or die('Could not connect: '.pg_last_error());
      $email = $_POST['email'];   //prendo il parametro 'email' della form inviata
      $q1 = "select * from utente where email=$1";  //il risultato della query viene inserito dentro $1
@@ -44,7 +46,8 @@
             $q1 = "select * from utente where email=$1";
             $result = pg_query_params($dbconn,$q1,array($email));
             $line=pg_fetch_array($result,null,PGSQL_ASSOC);
-            header('location: ../Home/homepage.php?nickname='.$line["nickname"].'');
+            $_SESSION["nickname"]=''.$line["nickname"].'';
+            header('location: ../Home/homepage.php');
         }
         //se la password non è corretta
         else{

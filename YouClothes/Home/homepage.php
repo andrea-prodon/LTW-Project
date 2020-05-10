@@ -12,10 +12,9 @@
         <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
         <?php
-            //serve per controllare se qualcuno ha acceduto
-            if(isset($_GET['nickname'])){
-                $nickname=$_GET['nickname'];
-            }
+            //inizio sessione
+            session_set_cookie_params(0);   //così quando chiudo la pagina la sessione si chiude
+            session_start();
         ?>
 
         <title>YouClothes</title>
@@ -74,10 +73,10 @@
                         </a>
                         
                         <div class="dropdown-menu"  aria-labelledby="dropdown_target" id="dropdown_target">
-                            <a class="dropdown-item" href="../ProfiloUtente/mioprofilo.php?nickname=<?php echo $nickname;?>">Il mio profilo</a>
+                            <a class="dropdown-item" href="../ProfiloUtente/mioprofilo.php">Il mio profilo</a>
                             <a class="dropdown-item">Preferiti</a>
                             <a class="dropdown-item">I miei annunci</a>
-                            <a class="dropdown-item" href="homepage.php">Logout</a>
+                            <a class="dropdown-item" href="../PHP files/logout.php">Logout</a>
                         </div>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -149,7 +148,14 @@
 
                     <?php
                         //questa parte serve per far apparire o login/signup in caso non è stato effettuato l'accesso oppure il nickname di colui che ha effettuato l'accesso
-                        if(!(isset($_GET['nickname']))){    //se non hai effettuato l'accesso appare signup/register
+                        if(isset($_SESSION["nickname"])){
+                            echo "
+                            <div class=nav-item align=right>
+                            <a class=nav-link href=../ProfiloUtente/mioprofilo.php>$_SESSION[nickname]</a>
+                            </div>
+                            ";
+                        }
+                        else{
                             echo "
                             <div class=nav-item align=right>
                                 <a class=nav-link href=../Registrazione/login.html>Login</a>
@@ -158,13 +164,8 @@
 
                             <div class=nav-item align=right>
                                 <a class=nav-link href=../Registrazione/signup.html>Sign up</a>
-                            </div>";
-                        }
-                        else{   //altrimenti appare il tuo nickname
-                            echo '
-                            <div class=nav-item align=right>
-                                <span class=navbar-text>PROFILO: '.$nickname.'</span>
-                            </div>';
+                            </div>
+                            ";    
                         }
                     
                     ?>
