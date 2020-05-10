@@ -73,6 +73,7 @@
                         
                         <div class="dropdown-menu"  aria-labelledby="dropdown_target" id="dropdown_target">
                             <a class="dropdown-item" href="../ProfiloUtente/mioprofilo.php">Il mio profilo</a>
+                            <a class="dropdown-item" href="../Saldo personale/caricasaldo.html">Ricarica saldo utente</a>
                             <a class="dropdown-item">Preferiti</a>
                             <a class="dropdown-item">I miei annunci</a>
                             <a class="dropdown-item" href="../PHP files/logout.php">Logout</a>
@@ -185,28 +186,11 @@
         </nav>       
         
 
-        <!-- Forse da cambiare per renderla dinamica o direttamente eliminare questa parte tanto abbiamo fatto le categorie dinamiche-->
+        <!-- Da riempire un po per rendere piu bella esteticamente (in futuro)-->
         <div id="container" style=background-color:white;>
             <div id="parteDinamica"> <!-- inizio parte dinamica -->
-                <ul id="griglia">
-                    
-                    <li><img src="../foto vestiti/felpa.jpg" width="250" height="250"><p>Felpa</p></li>
-                    <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>T-shirt star wars</p></li>
-                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>Polo</p></li>
-                    <li><img src="../foto vestiti/giacchetto pelle.jpg"width="250" height="250"><p>Giacchetto di pelle</p></li>
-                    <li><img src="../foto vestiti/jeans.jpg"width="250" height="250"><p>Jeans</p></li>
-                    <li><img src="../foto vestiti/giaccone.jpg"width="250" height="250"><p>Giaccone</p></li>
-                    <li><img src="../foto vestiti/maglietta gialla e nera.jpg"width="250" height="250"><p>T-shirt gialla e nera</p></li>
-                    <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
-                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
-                    <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
-                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
-                    <li><img src="../foto vestiti/giaccone.jpg"width="250" height="250"><p>t-shirt</p></li>
-                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
-                    <li><img src="../foto vestiti/magliasw.jpg"width="250" height="250"><p>t-shirt</p></li>
-                    <li><img src="../foto vestiti/tshirt.jpg"width="250" height="250"><p>t-shirt</p></li>
-                </ul>
-
+            <br><br><br>
+                <sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo>
             </div>  <!-- fine parte dinamica -->
         </div>
      
