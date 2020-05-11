@@ -46,7 +46,7 @@
                     }
                 }
                 echo "<tr><td><span style=color:lime;>DISPONIBILE</span></td></tr>"; //da cambiare ovvero vedere se veramente è disponibile o no 
-                echo "<tr><td><button>ACQUISTA</button></td></tr>"; //anche qui da rendere o no disponibile all'acquisto
+                echo "<tr><td><a href='../PHP files/acquisto.php'><button>ACQUISTA</button></td></tr>"; //anche qui da rendere o no disponibile all'acquisto
                 echo "<br>";
             }
             echo "</table>\n";
