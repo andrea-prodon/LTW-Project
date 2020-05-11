@@ -35,13 +35,15 @@
                             <label for="password" class="labels">Password</label>
                             <input type="Password" maxlength="20" name="password" id="password" required><br><br>
                             
-                        </sottotitolo>
-                            
+                        </sottotitolo> 
                         <input type="reset" value="Reset"> &nbsp;&nbsp; 
                         <input type="submit" name="loginButton" value="Conferma"> 
                     </p>
             </div>
         </form>
+        <p align="center">
+            <a href="../Home/homepage.php"><button>Torna Home</button></a> 
+        </p>
     </body>
 
 </html>

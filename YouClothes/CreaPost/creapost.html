@@ -25,9 +25,7 @@
 
         <form method="POST" action="../PHP files/creapost.php" id="creazionepost" name="creazionepost" enctype="multipart/form-data">
             <p align="center">
-                <sottotitolo>
-                    <label for="nomepost" class="labels">Titolo: </label>
-                    <input type="text" maxlength="50" required name="nomepost" id="nomepost"><br><br>     
+                <sottotitolo> 
                     
                     <label for="foto" class="labels" >Foto:</label>
                     <input type="text" maxlength="100" required name="foto" id="foto"><br><br>     
@@ -56,11 +54,13 @@
                 </sottotitolo>
 
                 <input type="reset" value="Reset"> &nbsp;&nbsp; 
-                <input type="submit" value="Conferma"> 
+                <input type="submit" value="Conferma" onSubmit="valida()"> 
             </p>
 
         </form>
-
+        <p align="center">
+            <a href="../Home/homepage.php"><button>Torna Home</button></a> 
+        </p>
     </body>
 
 </html>

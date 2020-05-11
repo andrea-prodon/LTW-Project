@@ -130,7 +130,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../CreaPost/creapost.html">Crea annuncio</a>
+                        <a class="nav-link" href="../PHP files/controllo_creaPost.php">Crea annuncio</a>
                     </li>
 
                     <!--

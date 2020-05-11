@@ -2,8 +2,7 @@
 //per distruggere la sessione e quindi fare il logou
     session_start();
     if(isset($_SESSION['nickname'])){
-        session_destroy();
-        header('location: ../Home/homepage.php');
+        header('location: ../CreaPost/creapost.html');
     }
     echo "<html>
 
@@ -18,7 +17,7 @@
     <body class=bordo>
 
         <p align=center> <br><br><br><br>
-            <titolo>Non puoi effettuare il logout se ancora non hai fatto il login!</titolo> <br><br>
+            <titolo>Non puoi pubblicare un annuncio se ancora non hai fatto il login!</titolo> <br><br>
             <sottotitolo>
                 Crea un account premendo
                 <a href=../Registrazione/signup.php>QUI </a>
