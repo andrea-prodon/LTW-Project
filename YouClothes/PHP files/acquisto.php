@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 
-        WORK IN PROGRESS
-    -->
+    WORK IN PROGRESS
 </body>
 </html>
