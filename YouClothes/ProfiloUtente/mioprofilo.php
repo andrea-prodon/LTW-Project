@@ -42,6 +42,7 @@
                     Città: $citta<br><br>
                 </sottotitolo><br>
                 <p align=center>
+                <a href='../PHP files/logout.php'><button>Logout</button></a>&nbsp;&nbsp;
                 <a href=../Home/homepage.php><button>Indietro</button></a>&nbsp;&nbsp;
                 </p>
 
