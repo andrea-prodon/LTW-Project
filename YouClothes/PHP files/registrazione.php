@@ -92,6 +92,7 @@
                     $result = pg_query_params($dbconn,$q1,array($email));
                     $line=pg_fetch_array($result,null,PGSQL_ASSOC);
                     $_SESSION["nickname"]=''.$nickname.'';
+                    $_SESSION["saldo"]=''+0;
                     header('location: ../Home/homepage.php');
                 }
             }

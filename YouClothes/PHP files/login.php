@@ -45,11 +45,20 @@
         $pass = md5($_POST['password']);
         $q1 = "select * from utente where email=$1 and password=$2";
         $result = pg_query_params($dbconn,$q1,array($email,$pass));
+
         if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
             $q1 = "select * from utente where email=$1";
             $result = pg_query_params($dbconn,$q1,array($email));
             $line=pg_fetch_array($result,null,PGSQL_ASSOC);
             $_SESSION["nickname"]=''.$line["nickname"].'';
+
+            $q1="select saldo from utente where nickname ='$_SESSION[nickname]'";
+
+            $res=pg_query($dbconn,$q1);
+            $row = pg_fetch_row($res);
+            $saldoattuale=$row[0];
+            $_SESSION["saldo"]=''+$saldoattuale;
+
             header('location: ../Home/homepage.php');
         }
         //se la password non è corretta
