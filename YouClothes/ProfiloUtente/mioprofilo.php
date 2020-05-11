@@ -41,7 +41,9 @@
                     Data di nascita: $datanascita<br><br>
                     Città: $citta<br><br>
                 </sottotitolo><br>
-                <a href=../Home/homepage.php>Indietro</a>&nbsp;&nbsp;
+                <p align=center>
+                <a href=../Home/homepage.php><button>Indietro</button></a>&nbsp;&nbsp;
+                </p>
 
         </body>
         </html>"; 

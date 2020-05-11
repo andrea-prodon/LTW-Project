@@ -11,7 +11,7 @@
             $q1="select saldo from utente where nickname ='$utente'";
 
             
-            $res=pg_query($dbconn,$q1) or die('Query failed '.pg_last_error());;
+            $res=pg_query($dbconn,$q1) or die('Query failed '.pg_last_error());
             $row = pg_fetch_row($res);
             $saldoattuale=$row[0];
 
@@ -38,10 +38,10 @@
                     <p align=center> <br><br><br><br>
                         <titolo>Operazione completata con successo!</titolo> <br><br><br><br>
                         <sottotitolo>
-                        Saldo precedente: $saldoattuale<br>
-                        Saldo caricato: $importo<br>
-                        Nuovo saldo: $nuovoimporto<br><br>
-                        <a href='../Home/homepage.php'>Torna alla home </a>
+                            Saldo precedente: $saldoattuale<br>
+                            Saldo caricato: $importo<br>
+                            Nuovo saldo: $nuovoimporto<br><br>
+                            <a href='../Home/homepage.php'>Torna alla home </a>
                         </sottotitolo>
                     </p>
                 </body>

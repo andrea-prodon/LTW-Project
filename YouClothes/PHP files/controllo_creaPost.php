@@ -1,5 +1,5 @@
 <?php
-//per distruggere la sessione e quindi fare il logou
+//per distruggere la sessione e quindi fare il logout
     session_start();
     if(isset($_SESSION['nickname'])){
         header('location: ../CreaPost/creapost.html');

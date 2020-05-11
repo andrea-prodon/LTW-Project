@@ -23,7 +23,9 @@
             $result = pg_query($query) or die('Query failed '.pg_last_error());
             //Iniziamo a printare i dati prelevati dal DB
             echo "<table align='center'>\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
+            $indice = 0; //mi serve per sapere a che linea sono nello scorrimento degli annunci nel while
             while ($line = pg_fetch_array($result,null,PGSQL_ASSOC)) {  //dentro a questo while creo righe della tabella in base a quanti annunci della categoria richiesta sono presenti
+                $annuncio = $line["id"];
                 foreach ($line as $colvalue){
                     if($i!=0){
                         echo "<tr>";
@@ -46,8 +48,10 @@
                     }
                 }
                 echo "<tr><td><span style=color:lime;>DISPONIBILE</span></td></tr>"; //da cambiare ovvero vedere se veramente è disponibile o no 
-                echo "<tr><td><a href='../PHP files/acquisto.php'><button>ACQUISTA</button></td></tr>"; //anche qui da rendere o no disponibile all'acquisto
+                echo "<tr><td><a href='../PHP files/conferma_acquisto.php?annuncio=$annuncio'><button>ACQUISTA</button></td></tr>"; //anche qui da rendere o no disponibile all'acquisto
+                //nell echo sopra, nel linkare il bottone alla pagine acquista, fornisco con una url get l'id dell'annuncio che è stato cliccato
                 echo "<br>";
+                $indice = $indice + 1;
             }
             echo "</table>\n";
             pg_free_result($result);
