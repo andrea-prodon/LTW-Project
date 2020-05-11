@@ -3,7 +3,7 @@
     session_start();    //serve sempre quando vuoi ricavare qualcosa dalla sessione (quindi lo devi inserire in tutte quelle pagine in cui vuoi accedere alla sessione)
     if (isset($_SESSION["nickname"])) {
         $nickname=$_SESSION["nickname"];
-        $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+        $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
         or die('Could not connect: '.pg_last_error());
         $q1 = "select * from utente where nickname=$1";
         $result = pg_query_params($dbconn,$q1,array($nickname));
@@ -36,6 +36,7 @@
                 <sottotitolo>
                     Nome: $nome<br><br>
                     Cognome: $cognome<br><br>
+                    Saldo attuale: $_SESSION[saldo] euro<br><br>
                     Email: $email<br><br>
                     Data di nascita: $datanascita<br><br>
                     Città: $citta<br><br>
