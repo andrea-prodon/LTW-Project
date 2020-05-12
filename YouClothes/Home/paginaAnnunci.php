@@ -48,7 +48,10 @@
                     }
                 }
                 echo "<tr><td><span style=color:lime;>DISPONIBILE</span></td></tr>"; //da cambiare ovvero vedere se veramente è disponibile o no 
+                
                 echo "<tr><td><a href='../PHP files/conferma_acquisto.php?annuncio=$annuncio'><button>ACQUISTA</button></td></tr>"; //anche qui da rendere o no disponibile all'acquisto
+                
+                
                 //nell echo sopra, nel linkare il bottone alla pagine acquista, fornisco con una url get l'id dell'annuncio che è stato cliccato
                 echo "<br>";
                 $indice = $indice + 1;
