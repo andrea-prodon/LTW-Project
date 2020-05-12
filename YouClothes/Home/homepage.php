@@ -55,7 +55,7 @@
             <div class="collapse navbar-collapse" id="collapse_target">
 
                 <!--semplice testo-->
-                <span class="navbar-text">YouClothes</span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href = "homepage.php"> <span class="navbar-text">YouClothes</span></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                 <ul class="navbar-nav">
 
