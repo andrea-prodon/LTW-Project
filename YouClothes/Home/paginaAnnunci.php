@@ -1,15 +1,6 @@
 <html>
     <head>
-        <style>
-            table {
-                border-collapse:collapse;
-            }
-            td, th {
-                border:1px solid black;
-                padding:25px;
-            }
-        </style>
-        
+        <link rel="stylesheet" href="../stile.cc">
     </head>
     <body>
         <?php
@@ -17,9 +8,9 @@
             $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
             $j=0;
             $i=0;
-            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect:' .pg_last_error());
-            $query = "SELECT * FROM annuncio where categoria='$categoria'"; //query per ottenere la categoria prodotti scelta
+            $query = "SELECT * FROM annuncio where categoria='$categoria' and disponibile=true"; //query per ottenere la categoria prodotti scelta
             $result = pg_query($query) or die('Query failed '.pg_last_error());
             //Iniziamo a printare i dati prelevati dal DB
             echo "<table align='center'>\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
@@ -40,6 +31,7 @@
                             if($j==3){
                                 $j=0;
                                 $i=0;
+                                break;  //per far smettere la visulalizzazione delle altre colonne che non servono
                             }
                         }
                     }

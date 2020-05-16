@@ -2,7 +2,7 @@
     <body>
         <?php
             session_start();    
-            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
             
             $importo = $_POST['importo'];   //prendo il parametro 'importo' della form inviata
@@ -22,7 +22,7 @@
             $data=pg_query_params($dbconn,$q2,array($nuovoimporto));   //operazione per effettuare la query e inserire i dati all'interno di 'array'
             
             if($data){
-                $_SESSION["saldo"]=''+$nuovoimporto;
+                $_SESSION["saldo"]=$nuovoimporto;
                 echo "<html>
 
                 <head>

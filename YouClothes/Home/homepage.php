@@ -65,24 +65,26 @@
                         in questo caso impostato sui link contenuti dal div successivo
                         mentre data-toggle indica il tipo di tasto
                     -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#dropdown_target" href="#">
-                            Menù
-                            <span class="caret"></span>
-                        </a>
-                        
-                        <div class="dropdown-menu"  aria-labelledby="dropdown_target" id="dropdown_target">
-                            <a class="dropdown-item" href="../ProfiloUtente/mioprofilo.php">Il mio profilo</a>
-                            <?php
-                                if(isset($_SESSION["nickname"])){
-                                echo "<a class='dropdown-item' href='../Saldo personale/caricasaldo.html'>Ricarica saldo utente</a>";
-                                }
-                            ?>
-                            <a class="dropdown-item">Preferiti</a>
-                            <a class="dropdown-item">I miei annunci</a>
-                            <a class="dropdown-item" href="../PHP files/logout.php">Logout</a>
-                        </div>
-                    </li>
+                    <?php
+                        if(isset($_SESSION["nickname"])){
+                            echo "
+                            <li class=nav-item dropdown>
+                                <a class=nav-link dropdown-toggle data-toggle=dropdown data-target=#dropdown_target href=#>
+                                    Menù
+                                    <span class=caret></span>
+                                </a>
+                                
+                                <div class=dropdown-menu  aria-labelledby=dropdown_target id=dropdown_target>
+                                    <a class=dropdown-item href=../ProfiloUtente/mioprofilo.php>Il mio profilo</a>
+                                    <a class=dropdown-item href=../Saldo personale/caricasaldo.html>Ricarica saldo utente</a>;
+                                    <a class=dropdown-item>Preferiti</a>
+                                    <a class=dropdown-item>I miei annunci</a>
+                                    <a class=dropdown-item href=../PHP files/logout.php>Logout</a>
+                                </div>
+                            </li>
+                            ";
+                        }
+                    ?>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     <!--altri link contenuti nella nav dopo il tasto dropdown-->
@@ -156,8 +158,8 @@
                             echo "
                             <div class=nav-item align=right>
                                 <a class=nav-link href=../ProfiloUtente/mioprofilo.php>$_SESSION[nickname]</a>
-                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <div class=nav-item align=right style=color:white> Saldo: $_SESSION[saldo] euro</div>";
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class=nav-item align=right style=color:white>Saldo: $_SESSION[saldo] euro</div>";
                         }
                         else{
                             echo "

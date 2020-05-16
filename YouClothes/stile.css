@@ -65,3 +65,11 @@ sottotitolo {
     margin: 30px;
     background: rgb(52, 58, 64);
     }
+
+table {
+    border-collapse:collapse;
+}
+td, th {
+    border:1px solid black;
+    padding:25px;
+}
