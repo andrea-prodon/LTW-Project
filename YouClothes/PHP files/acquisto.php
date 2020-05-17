@@ -12,7 +12,15 @@
             $query = "update annuncio set disponibile=false where id=$id_annuncio";
             $res = pg_query($dbconn, $query) or die('Query failed '.pg_last_error()); 
             
+<<<<<<< HEAD
             //la colonna utente_email sarebbe l'email di chi ha comprato l'annuncio che in questa query viene aggiornato chi ha comprato cosa
+=======
+            $query_vend = "select utente_email from annuncio where id=$id_annuncio";
+            $res_vend= pg_query($dbconn, $query_vend) or die('Query failed '.pg_last_error());
+            $row_vend =pg_fetch_row($res_vend);
+            $email_venditore = $row_vend[0];     //email del venditore dell annuncio
+
+>>>>>>> 8ff44e38f5e25a5aa8a70100c0a574908bf8b637
             $query = "update annuncio set utente_email='$email' where id=$id_annuncio";
             
             $res = pg_query($dbconn, $query) or die('Query failed '.pg_last_error()); 
@@ -22,21 +30,32 @@
             $row = pg_fetch_row($res);
             $prezzo=$row[0];
 
+
+
             $utente = $_SESSION["nickname"];
             $q1="select saldo from utente where nickname ='$utente'";
 
             $res2=pg_query($dbconn,$q1) or die('Query failed '.pg_last_error());
             $row2 = pg_fetch_row($res2);
-            $saldoutente=$row2[0];
+            $saldoutente=$row2[0];      //saldo del compratore
 
-            $q2="update utente set saldo = $1 WHERE nickname = '$utente'";
+            $aggiorna_saldo_compratore="update utente set saldo = $1 WHERE nickname = '$utente'";
+            $prendi_saldo_venditore="select saldo from utente where email = '$email_venditore'";
+            $aggiorna_saldo_venditore="update utente set saldo = $1 where email = '$email_venditore'";
+
+            $res_saldo_vend = pg_query($dbconn, $prendi_saldo_venditore);
+            $row_saldo_vend = pg_fetch_row($res_saldo_vend);
+            $saldo_venditore = $row_saldo_vend[0];      //saldo del venditore dell annuncio
 
             if ($saldoutente >= $prezzo)  {             // se si hanno soldi a sufficienza
-                $nuovosaldo = $saldoutente - $prezzo;
-                $data=pg_query_params($dbconn,$q2,array($nuovosaldo)); 
+                $nuovosaldo_compratore = $saldoutente - $prezzo;
+                $nuovosaldo_venditore = $saldo_venditore + $prezzo;
 
-                if($data){
-                    $_SESSION["saldo"]=$nuovosaldo;
+                $data=pg_query_params($dbconn,$aggiorna_saldo_compratore,array($nuovosaldo_compratore)); 
+                $data2 = pg_query_params($dbconn, $aggiorna_saldo_venditore, array($nuovosaldo_venditore));
+
+                if($data && $data2){
+                    $_SESSION["saldo"]=$nuovosaldo_compratore;
                     echo "<html>
 
                     <head>
@@ -54,7 +73,8 @@
                             <sottotitolo>
                                 Saldo precedente: $saldoutente <br>
                                 Costo articolo: $prezzo <br>
-                                Nuovo Saldo: $nuovosaldo <br><br>
+                                Nuovo Saldo: $nuovosaldo_compratore <br><br>
+                                
                                 <a href='../Home/homepage.php'><button>Torna alla home</button> </a>
                             </sottotitolo>
                         </p>
