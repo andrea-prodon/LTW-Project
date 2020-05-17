@@ -68,18 +68,18 @@
                     <?php
                         if(isset($_SESSION["nickname"])){
                             echo "
-                            <li class=nav-item dropdown>
-                                <a class=nav-link dropdown-toggle data-toggle=dropdown data-target=#dropdown_target href=#>
+                            <li class='nav-item dropdown'>
+                                <a class='nav-link dropdown-toggle' data-toggle='dropdown' data-target='#dropdown_target' href=#>
                                     Menù
-                                    <span class=caret></span>
+                                    <span class='caret'></span>
                                 </a>
                                 
-                                <div class=dropdown-menu  aria-labelledby=dropdown_target id=dropdown_target>
-                                    <a class=dropdown-item href=../ProfiloUtente/mioprofilo.php>Il mio profilo</a>
-                                    <a class=dropdown-item href=../Saldo personale/caricasaldo.html>Ricarica saldo utente</a>;
-                                    <a class=dropdown-item>Preferiti</a>
-                                    <a class=dropdown-item>I miei annunci</a>
-                                    <a class=dropdown-item href=../PHP files/logout.php>Logout</a>
+                                <div class='dropdown-menu'  aria-labelledby='dropdown_target' id='dropdown_target'>
+                                    <a class='dropdown-item' href='../ProfiloUtente/mioprofilo.php'>Il mio profilo</a>
+                                    <a class='dropdown-item' href='../Saldo personale/caricasaldo.html'>Ricarica saldo utente</a>
+                                    <a class='dropdown-item'>Preferiti</a>
+                                    <a class='dropdown-item'>I miei annunci</a>
+                                    <a class='dropdown-item' href='../PHP files/logout.php'>Logout</a>
                                 </div>
                             </li>
                             ";
