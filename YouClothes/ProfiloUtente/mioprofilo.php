@@ -1,6 +1,7 @@
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script>
     var bool=0; //serve per controllare se vuoi visualizzare o nascondere gli annunci
+    var bool2=0;
     $(document).ready(function(){
         $("#1").on({ //event handler concatenati
             click:function(){
@@ -18,6 +19,22 @@
         });
         
 
+        $("#3").on({ //event handler concatenati
+            click:function(){
+                if(bool2==0){    //al primo click carica gli annunci tuoi  e fa visualizzare appunto gli annunci tuoi 
+                    $("#parteDinamica2").load('paginaTuoiAnnunci.php');
+                    $("#3").text("Nascondi tuoi annunci");    //dopo averlo premuto appunto diventa "Nascondi annunci"
+                    bool2=1;
+                }
+                else{
+                    $("#parteDinamica2").html("");   //se ripremo dato che bool=1 allora voglio "nascondere" gli annunci quindi nell'inner html ricarico una pagina vuota
+                    $("#3").text("Visualizza i tuoi annunci");  //il bottone diventa Visualizza
+                    bool2=0;
+                }
+            }
+        });
+
+
     });
 </script>
 <?php
@@ -25,7 +42,7 @@
     session_start();    //serve sempre quando vuoi ricavare qualcosa dalla sessione (quindi lo devi inserire in tutte quelle pagine in cui vuoi accedere alla sessione)
     if (isset($_SESSION["nickname"])) {
         $nickname=$_SESSION["nickname"];
-        $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+        $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
         or die('Could not connect: '.pg_last_error());
         $q1 = "select * from utente where nickname=$1";
         $result = pg_query_params($dbconn,$q1,array($nickname));
@@ -65,8 +82,11 @@
                     Data di nascita: $datanascita<br><br>
                     Città: $citta<br><br>
                     <button id=1>Visualizza annunci acquistati</button><br><br>
+                    <button id=3>Visualizza i tuoi annunci</button><br><br>
                 </sottotitolo><br>
-                <div id=parteDinamica>
+                <div id=parteDinamica> <!-- parte dinamica per la visualizzazione degli annunci acquistati -->
+                </div>
+                <div id=parteDinamica2> <!-- parte dinamica per la visualizzazione degli annunci tuoi -->
                 </div>
                 <p align=center>
                 <a href='../PHP files/logout.php'><button>Logout</button></a>&nbsp;&nbsp;
