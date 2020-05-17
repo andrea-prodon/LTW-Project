@@ -16,7 +16,6 @@
         $result = pg_query($query) or die('Query failed '.pg_last_error());
         $line=pg_fetch_array($result,null,PGSQL_ASSOC); //true se la query ha dato risultati, false altrimenti. nel caso true allora vuol dire che c'è stata una corrispondenza tra id e annuncio quindi era sua, altrimenti non era suo
         if(isset($_SESSION["nickname"])){
-<<<<<<< HEAD
             if(!$line){ //appunto se non è un annuncio tuo, allora prosegui
                 $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
                 $j=0;
@@ -48,28 +47,6 @@
                                     break;
                                 }
                             }
-=======
-            $id_annuncio = $_GET["annuncio"];
-            $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
-            $j=0;
-            $i=0;
-            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
-            or die('Could not connect:' .pg_last_error());
-            $query = "SELECT * FROM annuncio where id='$id_annuncio'"; //query per ottenere la categoria prodotti scelta
-            $result = pg_query($query) or die('Query failed '.pg_last_error());
-            //Iniziamo a printare i dati prelevati dal DB
-            echo "<table align='center'>\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
-            $indice = 0; //mi serve per sapere a che linea sono nello scorrimento degli annunci nel while
-            //mostro l'annuncio che stai per comprare
-            while ($line = pg_fetch_array($result,null,PGSQL_ASSOC)) {  //dentro a questo while creo righe della tabella in base a quanti annunci della categoria richiesta sono presenti
-                $annuncio = $line["id"];
-                foreach ($line as $colvalue){
-                    if($i!=0){
-                        echo "<tr>";
-                        if($i==1){
-                            echo '<td width=250 rowspan=5> <img src="'.$colvalue.'" style=width=300px height=300px;></td></tr>';
-                            $i=$i+1;
->>>>>>> 1303cb8887baf92bc2f782563c4b1cf761e7af20
                         }
                         else{
                             $i=$i+1;
