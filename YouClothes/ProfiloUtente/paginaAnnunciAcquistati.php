@@ -22,7 +22,7 @@
                     if($i!=0){
                         echo "<tr>";
                         if($i==1){
-                            echo '<td width=250 rowspan=6> <img src="'.$colvalue.'" style=width=300px height=300px;></td></tr>';
+                            echo '<td width=250 rowspan=5> <img src="'.$colvalue.'" style=width=300px height=300px;></td></tr>';
                             $i=$i+1;
                         }
                         else{
@@ -40,7 +40,6 @@
                         $i=$i+1;
                     }
                 }
-                echo "<tr><td><span style=color:lime;>DISPONIBILE</span></td></tr>"; //da cambiare ovvero vedere se veramente è disponibile o no 
                 
                 echo "<tr><td><span style=color:lime;>ACQUISTATO</span></td></tr>"; //anche qui da rendere o no disponibile all'acquisto
                 
