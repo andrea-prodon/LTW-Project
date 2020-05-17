@@ -6,15 +6,18 @@
         if(isset($_SESSION["nickname"])){
             $email=$_SESSION["email"];
             $id_annuncio = $_GET["annuncio"]; //ottengo l'id dell'annuncio che è stato cliccato dalla get dell'url
-            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
 
             $query = "update annuncio set disponibile=false where id=$id_annuncio";
             $res = pg_query($dbconn, $query) or die('Query failed '.pg_last_error()); 
             
-            //la colonna utente_email sarebbe l'email di chi ha comprato l'annuncio che in questa query viene aggiornato chi ha comprato cosa
+            $query_vend = "select utente_email from annuncio where id=$id_annuncio";
+            $res_vend= pg_query($dbconn, $query_vend) or die('Query failed '.pg_last_error());
+            $row_vend =pg_fetch_row($res_vend);
+            $email_venditore = $row_vend[0];     //email del venditore dell annuncio
+
             $query = "update annuncio set utente_email='$email' where id=$id_annuncio";
-            
             $res = pg_query($dbconn, $query) or die('Query failed '.pg_last_error()); 
 
             $query = "select prezzo from annuncio where id=$id_annuncio";
