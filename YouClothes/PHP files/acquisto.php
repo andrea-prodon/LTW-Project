@@ -12,15 +12,7 @@
             $query = "update annuncio set disponibile=false where id=$id_annuncio";
             $res = pg_query($dbconn, $query) or die('Query failed '.pg_last_error()); 
             
-<<<<<<< HEAD
             //la colonna utente_email sarebbe l'email di chi ha comprato l'annuncio che in questa query viene aggiornato chi ha comprato cosa
-=======
-            $query_vend = "select utente_email from annuncio where id=$id_annuncio";
-            $res_vend= pg_query($dbconn, $query_vend) or die('Query failed '.pg_last_error());
-            $row_vend =pg_fetch_row($res_vend);
-            $email_venditore = $row_vend[0];     //email del venditore dell annuncio
-
->>>>>>> 8ff44e38f5e25a5aa8a70100c0a574908bf8b637
             $query = "update annuncio set utente_email='$email' where id=$id_annuncio";
             
             $res = pg_query($dbconn, $query) or die('Query failed '.pg_last_error()); 
