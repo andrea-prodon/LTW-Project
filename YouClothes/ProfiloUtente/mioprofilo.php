@@ -1,3 +1,25 @@
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script>
+    var bool=0; //serve per controllare se vuoi visualizzare o nascondere gli annunci
+    $(document).ready(function(){
+        $("#1").on({ //event handler concatenati
+            click:function(){
+                if(bool==0){    //al primo click carica gli annunci acquistati e fa visualizzare appunto gli annunci acquistati
+                    $("#parteDinamica").load('paginaAnnunciAcquistati.php');
+                    $("#1").text("Nascondi annunci acquistati");    //dopo averlo premuto appunto diventa "Nascondi annunci"
+                    bool=1;
+                }
+                else{
+                    $("#parteDinamica").html("");   //se ripremo dato che bool=1 allora voglio "nascondere" gli annunci quindi nell'inner html ricarico una pagina vuota
+                    $("#1").text("Visualizza annunci acquistati");  //il bottone diventa Visualizza
+                    bool=0;
+                }
+            }
+        });
+        
+
+    });
+</script>
 <?php
     session_set_cookie_params(0);   //così quando chiudo la pagina la sessione si chiude
     session_start();    //serve sempre quando vuoi ricavare qualcosa dalla sessione (quindi lo devi inserire in tutte quelle pagine in cui vuoi accedere alla sessione)
@@ -17,10 +39,12 @@
             $citta=$line["citta"];
             $datanascita=$line["dataNascita"];
         }
-        echo "<html>
+        echo "
+    <html>
 
         <head>
             <link rel=stylesheet href=../stile.css type=text/css>
+            <script src=https://code.jquery.com/jquery-2.1.3.min.js></script>
             <title>Profilo personale</title>
             <meta charset=utf-8>
             <meta name=viewport content=width=device-width, initial-scale=1>
@@ -40,14 +64,16 @@
                     Email: $email<br><br>
                     Data di nascita: $datanascita<br><br>
                     Città: $citta<br><br>
+                    <button id=1>Visualizza annunci acquistati</button><br><br>
                 </sottotitolo><br>
+                <div id=parteDinamica>
+                </div>
                 <p align=center>
                 <a href='../PHP files/logout.php'><button>Logout</button></a>&nbsp;&nbsp;
                 <a href=../Home/homepage.php><button>Indietro</button></a>&nbsp;&nbsp;
                 </p>
-
         </body>
-        </html>"; 
+    </html>"; 
 
     }
     else {
