@@ -67,7 +67,7 @@
 
                         <label for="citta" class="labels" >Città:</label>
                         <select name="citta" id="citta">
-                            <option value="nessuna" selected></option>
+                            <option value="nessuna" selected>VUOTO</option>
                             <option>ROMA</option>
                             <option>MILANO</option>
                             <option>BOLOGNA</option>

@@ -21,12 +21,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-
+    <!-- style="background-image: url(bla.jpg)" -->     
     <body>
         <br>
         <!--titolo del sito-->
         <div style="margin-bottom: 0px" align="center">
-            <titolo>YouClothes</titolo><br>
+            <a href = "homepage.php">
+                <titolo>YouClothes</titolo><br>
+            </a>
             <sottotitolo>Compra e vendi i tuoi vestiti usati!
             </sottotitolo>
         </div>
@@ -147,8 +149,8 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
                     
                     
 
@@ -157,7 +159,7 @@
                         if(isset($_SESSION["nickname"])){
                             echo "
                             <div class=nav-item align=right>
-                                <a class=nav-link href=../ProfiloUtente/mioprofilo.php>$_SESSION[nickname]</a>
+                            <a class=nav-link href=../ProfiloUtente/mioprofilo.php>Profilo: $_SESSION[nickname]</a>
                             </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <div class=nav-item align=right style=color:white>Saldo: $_SESSION[saldo] euro</div>";
                         }
@@ -210,7 +212,7 @@
                         var url = "paginaAnnunci.php?nome=";
                         categoria = String(categoria);
                         url = url.concat(categoria);
-                        $("#parteDinamica").load(''+url);
+                        $("#parteDinamica").hide().load(''+url).fadeIn(1000);
                     },
                     mouseenter: function(){	//quando il mouse punta su questi elemento
                         $(this).css("background-color", "lightblue");
