@@ -10,6 +10,17 @@
         <title>Carica saldo</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script> type="text/javascript"
+            function validaform() {
+                if(document.caricasaldo.importo.value < 0) {
+                    alert ("il saldo inserito non può essere negativo");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
     </head>
 
 
@@ -23,7 +34,7 @@
             </p>
         </div>
 
-        <form method="POST" action="caricasaldo.php" id="caricasaldo" name="caricasaldo"enctype="multipart/form-data">
+        <form method="POST" action="caricasaldo.php" id="caricasaldo" name="caricasaldo"enctype="multipart/form-data" onsubmit="validaform();">
             <p align="center">
                 <sottotitolo>
                     <label for="importo" class="labels">Importo: </label>

@@ -6,28 +6,59 @@
             or die('Could not connect: '.pg_last_error());
             
             $importo = $_POST['importo'];   //prendo il parametro 'importo' della form inviata
-            $utente = $_SESSION["nickname"];    
             
-            $q1="select saldo from utente where nickname ='$utente'";
+            if($importo > 0) {
+            
+                $utente = $_SESSION["nickname"];    
+                
+                $q1="select saldo from utente where nickname ='$utente'";
 
-            
-            $res=pg_query($dbconn,$q1) or die('Query failed '.pg_last_error());
-            $row = pg_fetch_row($res);
-            $saldoattuale=$row[0];
+                
+                $res=pg_query($dbconn,$q1) or die('Query failed '.pg_last_error());
+                $row = pg_fetch_row($res);
+                $saldoattuale=$row[0];
 
-            $q2="update utente set saldo = $1 WHERE nickname = '$utente'";  
+                $q2="update utente set saldo = $1 WHERE nickname = '$utente'";  
 
-            $nuovoimporto = $importo + $saldoattuale;
-            
-            $data=pg_query_params($dbconn,$q2,array($nuovoimporto));   //operazione per effettuare la query e inserire i dati all'interno di 'array'
-            
-            if($data){
-                $_SESSION["saldo"]=$nuovoimporto;
+                $nuovoimporto = $importo + $saldoattuale;
+                
+                $data=pg_query_params($dbconn,$q2,array($nuovoimporto));   //operazione per effettuare la query e inserire i dati all'interno di 'array'
+                
+                if($data){
+                    $_SESSION["saldo"]=$nuovoimporto;
+                    echo "<html>
+
+                    <head>
+                        <link rel=stylesheet href=../stile.css type=text/css>
+                        <title>Saldo caricato</title>
+                        <meta charset=utf-8>
+                        <meta name=viewport content=width=device-width, initial-scale=1>
+                    </head>
+                
+                
+                    <body class=bordo>
+                
+                        <p align=center> <br><br><br><br>
+                            <titolo>Operazione completata con successo!</titolo> <br><br><br><br>
+                            <sottotitolo>
+                                Saldo precedente: $saldoattuale<br>
+                                Saldo caricato: $importo<br>
+                                Nuovo saldo: $nuovoimporto<br><br>
+                                <a href='../Home/homepage.php'>Torna alla home </a>
+                            </sottotitolo>
+                        </p>
+                    </body>
+                
+                </html>";
+                }
+            }
+
+            else{
                 echo "<html>
 
                 <head>
                     <link rel=stylesheet href=../stile.css type=text/css>
-                    <title>Saldo caricato</title>
+                    <title>Importo negativo</title>
                     <meta charset=utf-8>
                     <meta name=viewport content=width=device-width, initial-scale=1>
                 </head>
@@ -36,18 +67,24 @@
                 <body class=bordo>
             
                     <p align=center> <br><br><br><br>
-                        <titolo>Operazione completata con successo!</titolo> <br><br><br><br>
+                        <titolo>Non è possibile inserire un importo negativo</titolo> <br><br><br><br>
                         <sottotitolo>
-                            Saldo precedente: $saldoattuale<br>
-                            Saldo caricato: $importo<br>
-                            Nuovo saldo: $nuovoimporto<br><br>
-                            <a href='../Home/homepage.php'>Torna alla home </a>
-                        </sottotitolo>
+                            Riprova la ricarica del tuo saldo premendo
+                            <a href='../Saldo personale/caricasaldo.html'>QUI </a>
+                        </sottotitolo> <br><br>
+                        <sottotitolo> 
+                            Oppure torna alla
+                            <a href='../Home/homepage.php'>HOME </a>
+                        </sottotitolo> <br><br>
+
+                            
                     </p>
                 </body>
             
             </html>";
             }
+
+
             pg_close();
         ?>
     </body>
