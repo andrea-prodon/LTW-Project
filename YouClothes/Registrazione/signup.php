@@ -53,7 +53,7 @@
         
         <form method="POST" action="../PHP files/registrazione.php" id="registrazione" name="registrazione" onSubmit="return validaForm()" enctype="multipart/form-data">
             <div class="titolo">
-                <p align="center"> <br><br><br><br>
+                <p align="center"> <br><br>
                     <titolo>Sign up</titolo><br><br>
                     <sottotitolo>
                         <label for="nome" class="labels">Nome: </label>

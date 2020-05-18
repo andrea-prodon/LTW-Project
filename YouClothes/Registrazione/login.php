@@ -25,7 +25,7 @@
         
         <form method="POST" name="login" action="../PHP files/login.php">
             <div class="titolo">
-                    <p align="center"> <br><br><br><br>
+                    <p align="center"> <br><br>
                         <titolo>Login</titolo><br><br>
                         <sottotitolo>
                             
