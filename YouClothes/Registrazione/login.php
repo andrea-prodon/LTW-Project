@@ -7,6 +7,7 @@
 ?>
 <html>
 
+
     <head>
         <link rel="stylesheet" href="../stile.css" type="text/css">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
