@@ -11,7 +11,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+        <script>
+            function validaSaldo(){
+                if(document.getElementById("importo").value<1){
+                    alert("Inserisci un importo maggiore di zero!");
+                    return false;
+                }
+                return trueM
+            }
+        </script>
     </head>
 
 
@@ -25,7 +33,7 @@
             </p>
         </div>
 
-        <form method="POST" action="caricasaldo.php" id="caricasaldo" name="caricasaldo"enctype="multipart/form-data">
+        <form method="POST" action="caricasaldo.php" id="caricasaldo" name="caricasaldo"enctype="multipart/form-data" onSubmit="return validaSaldo();">
             <p align="center">
                 <sottotitolo>
                     <label for="importo" class="labels">Importo: </label>

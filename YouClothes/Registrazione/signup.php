@@ -37,6 +37,11 @@
                     alert("le password inserite non corrispondono");
                     return false;
                 }
+                var citta = document.getElementById("citta");
+                if(citta.value=="nessuna"){
+                    alert("Inserisci una città!");
+                    return false;
+                }
                 return true;
             }
         </script>
@@ -46,7 +51,7 @@
     <body class="bordo">
 
         
-        <form method="POST" action="../PHP files/registrazione.php" id="registrazione" name="registrazione" onSubmit="validaForm()" enctype="multipart/form-data">
+        <form method="POST" action="../PHP files/registrazione.php" id="registrazione" name="registrazione" onSubmit="return validaForm()" enctype="multipart/form-data">
             <div class="titolo">
                 <p align="center"> <br><br><br><br>
                     <titolo>Sign up</titolo><br><br>
@@ -60,8 +65,15 @@
                         <label for="dataNascita" class="labels">Data di nascita: </label> 
                         <input type="date" required name="dataNascita" id="dataNascita"><br><br>
 
-                        <label for="citta" class="labels">Citta: </label> 
-                        <input type="text" maxlength="20" required name="citta" id="citta"><br><br>
+                        <label for="citta" class="labels" >Città:</label>
+                        <select name="citta" id="citta">
+                            <option value="nessuna" selected>VUOTO</option>
+                            <option>ROMA</option>
+                            <option>MILANO</option>
+                            <option>BOLOGNA</option>
+                            <option>NAPOLI</option>
+                            <option>TORINO</option>
+                        </select>  <br><br>
 
                         <label for="nickname" class="labels">NickName: </label>
                         <input type="text" maxlength="20" required name="nickname" id="nickname"><br><br>

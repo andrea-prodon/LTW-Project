@@ -2,7 +2,7 @@
     <body>
         <?php
             session_start();    
-            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
             
             $importo = $_POST['importo'];   //prendo il parametro 'importo' della form inviata
@@ -51,37 +51,6 @@
                 
                 </html>";
                 }
-            }
-
-            else{
-                echo "<html>
-
-                <head>
-                    <link rel=stylesheet href=../stile.css type=text/css>
-                    <title>Importo negativo</title>
-                    <meta charset=utf-8>
-                    <meta name=viewport content=width=device-width, initial-scale=1>
-                </head>
-            
-            
-                <body class=bordo>
-            
-                    <p align=center> <br><br><br><br>
-                        <titolo>Non è possibile inserire un importo negativo</titolo> <br><br><br><br>
-                        <sottotitolo>
-                            Riprova la ricarica del tuo saldo premendo
-                            <a href='../Saldo personale/caricasaldo.html'>QUI </a>
-                        </sottotitolo> <br><br>
-                        <sottotitolo> 
-                            Oppure torna alla
-                            <a href='../Home/homepage.php'>HOME </a>
-                        </sottotitolo> <br><br>
-
-                            
-                    </p>
-                </body>
-            
-            </html>";
             }
 
 

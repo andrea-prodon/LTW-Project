@@ -10,6 +10,16 @@
         <title>Crea annuncio</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            function valida(){
+                var categoria = document.getElementById("categoria");
+                if(categoria.value=="nessuna"){
+                    alert("Inserisci una categoria!");
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </head>
 
 
@@ -23,7 +33,7 @@
             </p>
         </div>
 
-        <form method="POST" action="../PHP files/creapost.php" id="creazionepost" name="creazionepost" enctype="multipart/form-data">
+        <form method="POST" action="../PHP files/creapost.php" id="creazionepost" name="creazionepost" enctype="multipart/form-data"  onSubmit="return valida()">
             <p align="center">
                 <sottotitolo> 
                     
@@ -37,7 +47,7 @@
                 
                     <label for="categoria" class="labels" style="text-align: left;">Categoria:</label>
                     <select name="categoria" id="categoria">
-                        <option></option>
+                        <option value="nessuna" selected>VUOTO</option>
                         <option value="maglietta">maglietta</option>
                         <option value="pantalone">pantalone</option>
                         <option value="cappello">cappello</option>
@@ -49,12 +59,12 @@
                     <textarea cols=20 rows="2" wrap="phisical" name="descrizione" id="descrizione"></textarea> <br><br>
 
                     <label for="prezzo" class="labels">Prezzo: </label>
-                    <input type="number" name="prezzo" id="prezzo"> <br><br>
+                    <input type="number" name="prezzo" id="prezzo" required> <br><br>
 
                 </sottotitolo>
 
                 <input type="reset" value="Reset"> &nbsp;&nbsp; 
-                <input type="submit" value="Conferma" onSubmit="valida()"> 
+                <input type="submit" value="Conferma"> 
             </p>
 
         </form>

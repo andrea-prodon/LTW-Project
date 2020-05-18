@@ -1,13 +1,12 @@
-TODO: controllo dei campi in creaPost.html;     (penso sia risolto)
-
-TODO: fare si che se carica un saldo negativo non può andare bene (piccolo controllo con uno script);     ---> FATTO
-
-TODO: in Registrazione/signup.php fare che le città si selezionano da una lista (mettiamo tutte le città d'italia?);
-
-TODO: dal menù devi referenziare il logout;     ----> ERA GIÀ FATTO
-
-TODO: referenziare ricarica saldo da menù;      ----> ERA GIÀ FATTO
-
 TODO: dopo aver provato ad acquistare, se ti manda nella pagina di ricarica saldo, 
       subito dopo ti deve rimandare nella pagina dove stavi effettuando 
       l'acquisto prima di scalarti i soldi;              ----> RISOLTO QUASI COMPLETAMENTE   (ora funziona tutto ma ti rimanda alla home)
+
+COSE FATTE:
+-controllo dei campi nel file creaPost.html;
+-quando sei loggato, da menù se premi “i miei annunci” ti visualizza al centro della pagina i tuoi annunci caricati;
+-controllato che se viene caricato saldo negativo, attraverso uno SCRIPT e cancellato parte di codice dentro caricasaldo.php che controllava se il saldo era negativo; 
+-messa lista di città in signup.php;
+-fatto controllo in javascript per inserire per forza una città in signup.php;
+
+

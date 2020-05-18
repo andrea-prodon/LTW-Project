@@ -78,7 +78,7 @@
                                     <a class='dropdown-item' href='../ProfiloUtente/mioprofilo.php'>Il mio profilo</a>
                                     <a class='dropdown-item' href='../Saldo personale/caricasaldo.html'>Ricarica saldo utente</a>
                                     <a class='dropdown-item'>Preferiti</a>
-                                    <a class='dropdown-item'>I miei annunci</a>
+                                    <a class='dropdown-item' id='MieiAnnunci'>I miei annunci</a>
                                     <a class='dropdown-item' href='../PHP files/logout.php'>Logout</a>
                                 </div>
                             </li>
@@ -217,6 +217,11 @@
                     },
                     mouseleave: function(){ //quando il mouse non punta più su questi elemento
                         $(this).css("background-color","#4CAF50");
+                    }
+                });
+                $("#MieiAnnunci").on({ //event handler concatenati
+                    click:function(){
+                        $("#parteDinamica").load('../ProfiloUtente/paginaTuoiAnnunci.php');
                     }
                 });
             });
