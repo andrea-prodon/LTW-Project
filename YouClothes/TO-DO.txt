@@ -1,6 +1,9 @@
 TODO: dopo aver provato ad acquistare, se ti manda nella pagina di ricarica saldo, 
       subito dopo ti deve rimandare nella pagina dove stavi effettuando 
-      l'acquisto prima di scalarti i soldi;              ----> RISOLTO QUASI COMPLETAMENTE   (ora funziona tutto ma ti rimanda alla home)
+      l'acquisto prima di scalarti i soldi;              
+      ----> RISOLTO  (ora funziona tutto ma ti rimanda alla home,  ho deciso di non modificare questa cosa
+                        perche richiederebbe troppi cazzi e non vale la pena, si puo comunque fare che dopo che hai caricato i soldi
+                        ti rimanda alla home e poi ti vai a ricomprare l'articolo, poi in caso ti spiego bene, comunque penso vada bene anche per te)
 
 COSE FATTE:
 -controllo dei campi nel file creaPost.html;
