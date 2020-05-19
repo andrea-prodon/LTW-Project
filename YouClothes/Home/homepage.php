@@ -29,7 +29,8 @@
             <a href = "homepage.php">
                 <titolo>YouClothes</titolo><br>
             </a>
-            <sottotitolo>Compra e vendi i tuoi vestiti usati!
+            <sottotitolo>
+                Compra e vendi i tuoi vestiti usati!
             </sottotitolo>
         </div>
         <br>
@@ -87,7 +88,12 @@
                             ";
                         }
                     ?>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <?php
+                        if(!isset($_SESSION["nickname"])){
+                            echo "
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                        }
+                    ?>
 
                     <!--altri link contenuti nella nav dopo il tasto dropdown-->
                     <!--Ho commentato perchè con Ajax bastano i bottoni, nel caso sentiamoci
@@ -134,24 +140,49 @@
                     <li class="nav-item">
                         <button id="5" class="bottone" name="giacchetto">Giacchetti</bottone>
                     </li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                    
 
                     <li class="nav-item">
                         <a class="nav-link" href="../PHP files/controllo_creaPost.php">Crea annuncio</a>
                     </li>
+                    <?php
+                        if(!isset($_SESSION["nickname"])){
+                            echo "
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                        }
+                        else{
+                            echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                        }
+                    ?>
+
+                    <!-- tasto cerca -->
+                    <span><input type="text" maxlength="30" placeholder="Cerca.." name="cerca" style="width: 100px;"></span>
 
                     <!--
                         serie di spazi inserita soltanto per far apparire il login e sign up nella parte destra
                         c'è sicuramente un altro modo piu corretto questa è soltanto una soluzione temporanea dato che
                         al momento non sapevo come fare
-                    -->
+                    
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    
-                    
+                    -->
+                    <?php
+                        if(!isset($_SESSION["nickname"])){
+                            echo "
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                        }
+                        else{
+                            echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                        }
+                    ?>
                     
 
                     <?php
@@ -165,6 +196,12 @@
                         }
                         else{
                             echo "
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                             <div class=nav-item align=right>
                                 <a class=nav-link href=../Registrazione/login.php>Login</a>
                             </div>
@@ -212,7 +249,7 @@
                         var url = "paginaAnnunci.php?nome=";
                         categoria = String(categoria);
                         url = url.concat(categoria);
-                        $("#parteDinamica").hide().load(''+url).fadeIn(1000);
+                        $("#parteDinamica").hide().load(''+url).fadeIn(650);    //effetto grafico
                     },
                     mouseenter: function(){	//quando il mouse punta su questi elemento
                         $(this).css("background-color", "lightblue");
@@ -224,6 +261,18 @@
                 $("#MieiAnnunci").on({ //event handler concatenati
                     click:function(){
                         $("#parteDinamica").load('../ProfiloUtente/paginaTuoiAnnunci.php');
+                    }
+                });
+                $("input").keyup(function (){
+                    var parola = $(this).val();
+                    var url = "ricercaAnnunci.php?cerca=";
+                    parola = String(parola);
+                    url = url.concat(parola);
+                    if(parola!=''){
+                        $("#parteDinamica").load(''+url);
+                    }
+                    else{
+                        $("#parteDinamica").html("<br><br><br><sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo>");
                     }
                 });
             });

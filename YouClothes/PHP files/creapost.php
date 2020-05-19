@@ -5,7 +5,7 @@
         // pagina per inserire i dettagli di un annuncio creato nel database
             session_start();
             $utente_email=$_SESSION["email"];
-            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
             $foto=$_POST['foto'];
             $categoria=$_POST['categoria'];
