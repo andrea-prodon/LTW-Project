@@ -80,8 +80,8 @@
                                 <div class='dropdown-menu'  aria-labelledby='dropdown_target' id='dropdown_target'>
                                     <a class='dropdown-item' href='../ProfiloUtente/mioprofilo.php'>Il mio profilo</a>
                                     <a class='dropdown-item' href='../Saldo personale/caricasaldo.html'>Ricarica saldo utente</a>
-                                    <a class='dropdown-item'>Preferiti</a>
-                                    <a class='dropdown-item' id='MieiAnnunci'>I miei annunci</a>
+                                    <!--<a class='dropdown-item'>Preferiti</a>-->
+                                    <a class='dropdown-item' id='MieiAnnunci' href=#>I miei annunci</a> <!-- href=# per far apparire la manina del link -->
                                     <a class='dropdown-item' href='../PHP files/logout.php'>Logout</a>
                                 </div>
                             </li>
