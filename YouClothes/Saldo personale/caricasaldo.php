@@ -2,6 +2,11 @@
     <body>
         <?php
             session_start();    
+            
+            if(!(isset($_POST['confirmButton']))){   //questa pagina può essere acceduta solo se prima si era sulla pagina di invio form
+                header('location: caricasaldo.html');
+            }
+
             $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
             

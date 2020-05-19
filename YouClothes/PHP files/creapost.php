@@ -5,6 +5,9 @@
         // pagina per inserire i dettagli di un annuncio creato nel database
             session_start();
             $utente_email=$_SESSION["email"];
+            if(!(isset($_POST['confirmButton']))){   //questa pagina può essere acceduta solo se prima si era sulla pagina di invio form
+                header('location: ../CreaPost/creapost.html');
+            }
             $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
             $foto=$_POST['foto'];

@@ -18,5 +18,6 @@ COSE FATTE:
 -controllato che se viene caricato saldo negativo, attraverso uno SCRIPT e cancellato parte di codice dentro caricasaldo.php che controllava se il saldo era negativo; 
 -messa lista di città in signup.php;
 -fatto controllo in javascript per inserire per forza una città in signup.php;
+-tasto ricerca;
 
 
