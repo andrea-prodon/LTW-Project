@@ -229,7 +229,7 @@
         </nav>       
 
         <!-- Da riempire un po per rendere piu bella esteticamente (in futuro)-->
-        <div id="container" style="background-image: url(sfondo.jpeg)">
+        <div id="container" style="background-image: url('youclothes opaco 75.png')">
             <div id="parteDinamica"> <!-- inizio parte dinamica -->
                 <sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
