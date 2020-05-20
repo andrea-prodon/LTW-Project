@@ -3,6 +3,7 @@
     
     <?php
         session_start();
+        
         if(isset($_SESSION["nickname"])){
             $email=$_SESSION["email"];
             $id_annuncio = $_GET["annuncio"]; //ottengo l'id dell'annuncio che è stato cliccato dalla get dell'url
