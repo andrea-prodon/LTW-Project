@@ -7,7 +7,7 @@
                 header('location: caricasaldo.html');
             }
 
-            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
             
             $importo = $_POST['importo'];   //prendo il parametro 'importo' della form inviata

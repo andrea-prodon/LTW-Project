@@ -21,8 +21,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <!-- style="background-image: url(bla.jpg)" -->     
-    <body>
+    <!-- style="background-image: url(sfondo.jpeg)" -->     
+    <body >
         <br>
         <!--titolo del sito-->
         <div style="margin-bottom: 0px" align="center">
@@ -197,10 +197,8 @@
                         else{
                             echo "
 
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                            ;
 
                             <div class=nav-item align=right>
                                 <a class=nav-link href=../Registrazione/login.php>Login</a>
@@ -229,13 +227,12 @@
                 </ul>
             </div>
         </nav>       
-        
 
         <!-- Da riempire un po per rendere piu bella esteticamente (in futuro)-->
-        <div id="container" style=background-color:white;>
+        <div id="container" style="background-image: url(sfondo.jpeg)">
             <div id="parteDinamica"> <!-- inizio parte dinamica -->
-            <br><br><br>
                 <sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             </div>  <!-- fine parte dinamica -->
         </div>
      
