@@ -22,7 +22,7 @@
 
     <body class="bordo sfondo">
 
-    <br><br>
+    <br><br><br><br><br><br>
         <table align="center" bgcolor="white">
             <td>
                 <form method="POST" name="login" action="../PHP files/login.php">
