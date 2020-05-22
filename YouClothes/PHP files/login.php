@@ -21,19 +21,23 @@
                 </head>
             
             
-                <body class=bordo>
-            
-                    <p align=center> <br><br><br><br>
-                        <titolo>Sembra che il tuo account non esista oppure l'email immessa è errata!</titolo> <br><br>
-                        <sottotitolo>
-                            Crea un account premendo
-                            <a href=../Registrazione/signup.php>QUI </a>
-                        </sottotitolo> <br><br>
-                        <sottotitolo> 
-                            Oppure ritenta il
-                            <a href=../Registrazione/login.php>LOGIN </a>
-                        </sottotitolo> <br><br>
-                    </p>
+                <body class='bordo sfondo'>
+                <br><br><br><br>
+                    <table bgcolor='white' align='center'>
+                        <td>
+                            <p align=center> 
+                                <titolo>Sembra che il tuo account non esista oppure l'email immessa è errata!</titolo> <br><br>
+                                <sottotitolo>
+                                    Crea un account premendo
+                                    <a href=../Registrazione/signup.php>QUI </a>
+                                </sottotitolo> <br><br>
+                                <sottotitolo> 
+                                    Oppure ritenta il
+                                    <a href=../Registrazione/login.php>LOGIN </a>
+                                </sottotitolo> <br><br>
+                            </p>
+                        </td>
+                    </table>
             
                 </body>
             
@@ -74,19 +78,24 @@
             </head>
         
         
-            <body class=bordo>
-
-                <p align=center><br><br><br>
-                    <titolo>
-                        La Password non è corretta!
-                    </titolo><br><br>
-                    <sottotitolo>
-                        Scegli una delle opzioni sottostanti: 
-                    </sottotitolo><br><br>
-                    <sottotitolo>
-                        <a href=../Registrazione/login.php>RIPROVA LOGIN </a>&nbsp;&nbsp; 
-                        <a href=../Home/homepage.php>RITORNA AL SITO </a>&nbsp;&nbsp;
-                    <sottotitolo>
+            <body class='bordo sfondo'>
+            <br><br><br>
+                <table bgcolor='white' align='center'>
+                    <td>
+                        <p align=center>
+                            <titolo>
+                                La Password non è corretta!
+                            </titolo><br><br>
+                            <sottotitolo>
+                                Scegli una delle opzioni sottostanti: 
+                            </sottotitolo><br><br>
+                            <sottotitolo>
+                                <a href=../Registrazione/login.php>RIPROVA LOGIN </a>&nbsp;&nbsp; 
+                                <a href=../Home/homepage.php>RITORNA AL SITO </a>&nbsp;&nbsp;
+                            <sottotitolo>
+                        </p>
+                    </td>
+                </table>                        
 
             </body>
             </html>";

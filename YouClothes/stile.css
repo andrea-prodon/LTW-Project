@@ -25,9 +25,14 @@ sottotitolo {
     font-family: fantasy;
 }
 
+
+.sfondo {
+    background-image: url('Home/youclothes opaco 75.png');
+}
+
 .bordo {
     width: device-width;
-    padding: 10px 20px;
+    
     border: 50px solid transparent;
     border-color: rgb(52, 58, 64); ;
 }

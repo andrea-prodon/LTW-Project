@@ -51,7 +51,7 @@
                 $indice = $indice + 1;
             }
             echo "</table>\n";
-            echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+            echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
             pg_free_result($result);
             pg_close($dbconn);
         ?>

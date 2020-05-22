@@ -20,32 +20,37 @@
     </head>
 
 
-    <body class="bordo">
+    <body class="bordo sfondo">
 
-        
-        <form method="POST" name="login" action="../PHP files/login.php">
-            <div class="titolo">
-                    <p align="center"> <br><br>
-                        <titolo>Login</titolo><br><br>
-                        <sottotitolo>
-                            
-                            <label for="email" class="labels">E-mail</label>
-                            <input type="email" maxlength="30" name="email" id="email" required><br><br>
-                            
-                            <label for="password" class="labels">Password</label>
-                            <input type="Password" maxlength="20" name="password" id="password" required><br><br>
+    <br><br>
+        <table align="center" bgcolor="white">
+            <td>
+                <form method="POST" name="login" action="../PHP files/login.php">
+                    <div class="titolo">
 
-                            
-                            
-                        </sottotitolo> 
-                        <input type="reset" value="Reset"> &nbsp;&nbsp; 
-                        <input type="submit" name="loginButton" value="Conferma"> 
-                    </p>
-            </div>
-        </form>
-        <p align="center">
-            <a href="../Home/homepage.php"><button>Torna Home</button></a> 
-        </p>
+                            <p align="center"> 
+                                <titolo>Login</titolo><br><br>
+                                <sottotitolo>
+                                    
+                                    <label for="email" class="labels">E-mail</label>
+                                    <input type="email" maxlength="30" name="email" id="email" required><br><br>
+                                    
+                                    <label for="password" class="labels">Password</label>
+                                    <input type="Password" maxlength="20" name="password" id="password" required><br><br>
+
+
+                                    
+                                </sottotitolo> 
+                                <input type="reset" value="Reset"> &nbsp;&nbsp; 
+                                <input type="submit" name="loginButton" value="Conferma"> 
+                            </p>
+                    </div>
+                </form>
+                <p align="center">
+                    <a href="../Home/homepage.php"><button>Torna Home</button></a> 
+                </p>
+            </td>
+        </table>
     </body>
 
 </html>

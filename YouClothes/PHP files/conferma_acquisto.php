@@ -1,6 +1,6 @@
 <html>
     <head><link rel="stylesheet" href="../stile.cc"></head>
-<body class=bordo>
+<body class="bordo sfondo">
     
     <?php
         session_start();
@@ -25,7 +25,7 @@
                 $query = "SELECT * FROM annuncio where id='$id_annuncio'"; //query per ottenere la categoria prodotti scelta
                 $result = pg_query($query) or die('Query failed '.pg_last_error());
                 //Iniziamo a printare i dati prelevati dal DB
-                echo "<table align='center'>\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
+                echo "<table align='center' bgcolor='white'>\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
                 $indice = 0; //mi serve per sapere a che linea sono nello scorrimento degli annunci nel while
                 //mostro l'annuncio che stai per comprare
                 while ($line = pg_fetch_array($result,null,PGSQL_ASSOC)) {  //dentro a questo while creo righe della tabella in base a quanti annunci della categoria richiesta sono presenti
@@ -72,17 +72,21 @@
                         </head>
                     
                     
-                        <body class=bordo>
-                    
-                            <p align=center> <br><br><br><br>
-                                <titolo>Sei sicuro di voler procedere all'acquisto di questo annuncio?</titolo> <br><br><br><br>
-                                <sottotitolo>
-                                <p align=center>
-                                    <a href='../Home/homepage.php'><button> Annulla</button> </a> &nbsp;&nbsp;&nbsp;
-                                    <a href='acquisto.php?annuncio=$id_annuncio'><button>Conferma</button> </a>
-                                </p>
-                                </sottotitolo>
-                            </p>
+                        <body class='bordo sfondo'>
+                        <br><br><br><br>
+                            <table align='center' bgcolor='white'>
+                                <td>
+                                    <p align=center> 
+                                        <titolo>Sei sicuro di voler procedere all'acquisto di questo annuncio?</titolo> <br><br><br><br>
+                                        <sottotitolo>
+                                            <p align='center'>
+                                                <a href='../Home/homepage.php'><button> Annulla</button> </a> &nbsp;&nbsp;&nbsp;
+                                                <a href='acquisto.php?annuncio=$id_annuncio'><button>Conferma</button> </a>
+                                            </p>
+                                        </sottotitolo>
+                                    </p>
+                                </td>
+                            </table>
                         </body>
                     
                     </html>";
@@ -98,16 +102,20 @@
                         </head>
                     
                     
-                        <body class=bordo>
-                    
-                            <p align=center> <br><br><br><br>
-                                <titolo>Non puoi acquistare un annucio che tu stesso hai creato!</titolo> <br><br><br><br>
-                                <sottotitolo>
-                                <p align=center>
-                                    <a href='../Home/homepage.php'><button> Torna Home</button> </a> &nbsp;&nbsp;&nbsp;
+                        <body class='bordo sfondo'>
+                            <br><br><br><br>
+                            <table bgcolor='white' align='center'>
+                            <td>
+                                <p align='center'> 
+                                    <titolo>Non puoi acquistare un annucio che tu stesso hai creato!</titolo> <br><br><br><br>
+                                    <sottotitolo>
+                                    <p align='center'>
+                                        <a href='../Home/homepage.php'><button> Torna Home</button> </a> &nbsp;&nbsp;&nbsp;
+                                    </p>
+                                    </sottotitolo>
                                 </p>
-                                </sottotitolo>
-                            </p>
+                            </td>
+                            </table>
                         </body>
                     
                     </html>";
@@ -124,21 +132,25 @@
             </head>
         
         
-            <body class=bordo>
-
-                <p align=center><br><br><br>
-                    <titolo>
-                        Sembra che tu non abbia effettuato l'accesso!
-                    </titolo><br><br>
-                    <sottotitolo>
-                        Scegli una delle opzioni sottostanti: 
-                    </sottotitolo><br><br>
-                    <sottotitolo>
-                        <a href=../Home/homepage.php>RITORNA AL SITO</a>&nbsp;&nbsp;
-                        <a href=../Registrazione/login.php>EFFETTUA L'ACCESSO</a>&nbsp;&nbsp; 
-                        <a href=../Registrazione/signup.php>REGISTRATI</a>&nbsp;&nbsp; 
-                    <sottotitolo>
-
+            <body class='sfondo bordo'>
+            <br><br><br>
+                <table bgcolor='white' align='center'>
+                    <td>
+                        <p align=center>
+                            <titolo>
+                                Sembra che tu non abbia effettuato l'accesso!
+                            </titolo><br><br>
+                            <sottotitolo>
+                                Scegli una delle opzioni sottostanti: 
+                            </sottotitolo><br><br>
+                            <sottotitolo>
+                                <a href=../Home/homepage.php>RITORNA AL SITO</a>&nbsp;&nbsp;
+                                <a href=../Registrazione/login.php>EFFETTUA L'ACCESSO</a>&nbsp;&nbsp; 
+                                <a href=../Registrazione/signup.php>REGISTRATI</a>&nbsp;&nbsp; 
+                            <sottotitolo>
+                        </p>
+                    </td>
+                </table
             </body>
             </html>"; 
 

@@ -63,9 +63,12 @@
                     </head>
                     
                     
-                    <body class=bordo>
-                
-                        <p align=center> <br><br><br><br>
+                    <body class='bordo sfondo'>
+                    <br><br><br><br>
+
+                    <table align='center' bgcolor='white'>
+                    <td>
+                        <p align=center> 
                             <titolo>Acquisto effettuato con successo!</titolo> <br><br><br><br>
                             <sottotitolo>
                                 Saldo precedente: $saldoutente <br>
@@ -75,6 +78,8 @@
                                 <a href='../Home/homepage.php'><button>Torna alla home</button> </a>
                             </sottotitolo>
                         </p>
+                    </td>
+                    </table>
                     </body>
                 
                 </html>";
@@ -92,9 +97,13 @@
                     </head>
                 
                 
-                    <body class=bordo>
-                
-                        <p align=center> <br><br><br><br>
+                    <body class='bordo sfondo'>
+
+                    <br><br><br><br>
+
+                    <table align='center' bgcolor='white'>
+                    <td>
+                        <p align=center> 
                             <titolo>Purtroppo il tuo saldo risulta insufficiente</titolo> <br><br><br><br>
                             <sottotitolo>
                                 Carica il tuo saldo premendo
@@ -103,10 +112,10 @@
                             <sottotitolo> 
                                 Oppure torna alla
                                 <a href='../Home/homepage.php'>HOME </a>
-                            </sottotitolo> <br><br>
-
-                                
+                            </sottotitolo> <br><br>                                
                         </p>
+                    </td>
+                    </table>
                     </body>
                 
                 </html>";

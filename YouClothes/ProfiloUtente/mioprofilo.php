@@ -57,7 +57,7 @@
             $datanascita=$line["dataNascita"];
         }
         echo "
-    <html>
+        <html>
 
         <head>
             <link rel=stylesheet href=../stile.css type=text/css>
@@ -68,62 +68,37 @@
         </head>
     
     
-        <body class=bordo>
-            <br><br>
-            <p align=center><br><br><br>
-                <titolo>
-                    Il tuo profilo:
-                </titolo><br><br><br><br>
-                <sottotitolo>
-                    Nome: $nome<br><br>
-                    Cognome: $cognome<br><br>
-                    Saldo attuale: $_SESSION[saldo] euro<br><br>
-                    Email: $email<br><br>
-                    Data di nascita: $datanascita<br><br>
-                    Città: $citta<br><br>
-                    <button id=1>Visualizza annunci acquistati</button><br><br>
-                    <button id=3>Visualizza i tuoi annunci</button><br><br>
-                </sottotitolo><br>
-                <div id=parteDinamica> <!-- parte dinamica per la visualizzazione degli annunci acquistati -->
-                </div>
-                <div id=parteDinamica2> <!-- parte dinamica per la visualizzazione degli annunci tuoi -->
-                </div>
-                <p align=center>
-                <a href='../PHP files/logout.php'><button>Logout</button></a>&nbsp;&nbsp;
-                <a href=../Home/homepage.php><button>Indietro</button></a>&nbsp;&nbsp;
-                </p>
+        <br><br><br><br><br>
+        
+        <body class='bordo sfondo'>
+            <table bgcolor='white' align='center'>
+                <td>
+                    <p align='center'>
+                        <titolo>
+                            Il tuo profilo:
+                        </titolo><br><br><br><br>
+                        <sottotitolo>
+                            Nome: $nome<br><br>
+                            Cognome: $cognome<br><br>
+                            Saldo attuale: $_SESSION[saldo] euro<br><br>
+                            Email: $email<br><br>
+                            Data di nascita: $datanascita<br><br>
+                            Città: $citta<br><br>
+                            <button id=1>Visualizza annunci acquistati</button><br><br>
+                            <button id=3>Visualizza i tuoi annunci</button><br><br>
+                        </sottotitolo><br>
+                        <div id='parteDinamica'> <!-- parte dinamica per la visualizzazione degli annunci acquistati -->
+                        </div>
+                        <div id='parteDinamica2'> <!-- parte dinamica per la visualizzazione degli annunci tuoi -->
+                        </div>
+                        <p align='center'>
+                        <a href='../PHP files/logout.php'><button>Logout</button></a>&nbsp;&nbsp;
+                        <a href=../Home/homepage.php><button>Indietro</button></a>&nbsp;&nbsp;
+                    </p>
+                </td>
+            </table>
         </body>
     </html>"; 
 
     }
-    else {
-        echo "<html>
-        <head>
-            <link rel=stylesheet href=../stile.css type=text/css>
-            <title>ERRORE</title>
-            <meta charset=utf-8>
-            <meta name=viewport content=width=device-width, initial-scale=1>
-        </head>
-    
-    
-        <body class=bordo>
-
-            <p align=center><br><br><br>
-                <titolo>
-                    Sembra che tu non abbia effettuato l'accesso!
-                </titolo><br><br>
-                <sottotitolo>
-                    Scegli una delle opzioni sottostanti: 
-                </sottotitolo><br><br>
-                <sottotitolo>
-                    <a href=../Home/homepage.php>RITORNA AL SITO</a>&nbsp;&nbsp;
-                    <a href=../Registrazione/login.php>EFFETTUA L'ACCESSO</a>&nbsp;&nbsp; 
-                    <a href=../Registrazione/signup.php>REGISTRATI</a>&nbsp;&nbsp; 
-                <sottotitolo>
-
-        </body>
-        </html>"; 
-
-    }
-
 ?>

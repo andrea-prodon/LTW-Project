@@ -23,34 +23,37 @@
     </head>
 
 
-    <body class="bordo">
+    <body class="bordo sfondo">
 
+        <br><br><br><br>
+        <table bgcolor="white" align="center">
+            <td>
         
+                <p align="center"> 
+                <div class="titolo">
+                        <titolo>Carica il tuo saldo personale</titolo><br><br>
+                    </p>
+                </div>
+
+                <form method="POST" action="caricasaldo.php" id="caricasaldo" name="caricasaldo"enctype="multipart/form-data" onSubmit="return validaSaldo();">
+                    <p align="center">
+                        <sottotitolo>
+                            <label for="importo" class="labels">Importo: </label>
+                            <input type="number" maxlength="5" required name="importo" id="importo"><br><br>     
+                            
+                        </sottotitolo>
+
+                        <!--<button onclick="window.location.href = '../Home/homepage.php';">Annulla</button> &nbsp;&nbsp; ------è buggato -->
+                        <input type="reset" value="Reset"> &nbsp;&nbsp; 
+                        <input type="submit" name="confirmButton" value="Conferma"> 
+                    </p>
+                </form>
+                <p align="center">
+                    <a href="../Home/homepage.php"><button>Torna Home</button></a> 
+                </p>
         
-        <div class="titolo">
-            <p align="center"> <br><br><br><br>
-                <titolo>Carica il tuo saldo personale</titolo><br><br>
-            </p>
-        </div>
-
-        <form method="POST" action="caricasaldo.php" id="caricasaldo" name="caricasaldo"enctype="multipart/form-data" onSubmit="return validaSaldo();">
-            <p align="center">
-                <sottotitolo>
-                    <label for="importo" class="labels">Importo: </label>
-                    <input type="number" maxlength="5" required name="importo" id="importo"><br><br>     
-                    
-                </sottotitolo>
-
-                <!--<button onclick="window.location.href = '../Home/homepage.php';">Annulla</button> &nbsp;&nbsp; ------è buggato -->
-                <input type="reset" value="Reset"> &nbsp;&nbsp; 
-                <input type="submit" name="confirmButton" value="Conferma"> 
-            </p>
-
-        </form>
-        <p align="center">
-            <a href="../Home/homepage.php"><button>Torna Home</button></a> 
-        </p>
-
+            </td>
+        </table>
         
     </body>
 

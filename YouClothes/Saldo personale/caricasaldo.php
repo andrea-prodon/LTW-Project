@@ -41,17 +41,23 @@
                     </head>
                 
                 
-                    <body class=bordo>
+                    <body class='bordo sfondo'>
+                    <br><br><br><br>
+                    <table align='center' bgcolor='white'>
+                    <td>
                 
-                        <p align=center> <br><br><br><br>
+                        <p align=center> 
                             <titolo>Operazione completata con successo!</titolo> <br><br><br><br>
                             <sottotitolo>
                                 Saldo precedente: $saldoattuale<br>
                                 Saldo caricato: $importo<br>
                                 Nuovo saldo: $nuovoimporto<br><br>
-                                <a href='../Home/homepage.php'>Torna alla home </a>
+                                <a href='../Home/homepage.php'>TORNA ALLA HOME</a>
                             </sottotitolo>
                         </p>
+
+                    </td>
+                    </table>
                     </body>
                 
                 </html>";

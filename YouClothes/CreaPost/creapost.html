@@ -23,54 +23,58 @@
     </head>
 
 
-    <body class="bordo">
+    <body class="bordo sfondo">
 
+        <br><br><br><br>
+        <table bgcolor="white" align="center">
+            <td>
         
-        
-        <div class="titolo">
-            <p align="center"> <br><br><br><br>
-                <titolo>Crea un nuovo annuncio</titolo><br><br>
-            </p>
-        </div>
+                <div class="titolo">
+                    <p align="center"> 
+                        <titolo>Crea un nuovo annuncio</titolo><br><br>
+                    </p>
+                </div>
 
-        <form method="POST" action="../PHP files/creapost.php" id="creazionepost" name="creazionepost" enctype="multipart/form-data"  onSubmit="return valida()">
-            <p align="center">
-                <sottotitolo> 
-                    
-                    <label for="foto" class="labels" >Foto:</label>
-                    <input type="text" maxlength="100" required name="foto" id="foto"><br><br>     
-                    
-                    <!--
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="file" name="foto" id="foto"><br><br>
-                    -->
-                
-                    <label for="categoria" class="labels" style="text-align: left;">Categoria:</label>
-                    <select name="categoria" id="categoria">
-                        <option value="nessuna" selected>VUOTO</option>
-                        <option value="maglietta">maglietta</option>
-                        <option value="pantalone">pantalone</option>
-                        <option value="cappello">cappello</option>
-                        <option value="felpa">felpa</option>
-                        <option value="giacchetto">giacchetto</option>
-                    </select>  <br><br>
+                <form method="POST" action="../PHP files/creapost.php" id="creazionepost" name="creazionepost" enctype="multipart/form-data"  onSubmit="return valida()">
+                    <p align="center">
+                        <sottotitolo> 
+                            
+                            <label for="foto" class="labels" >Foto:</label>
+                            <input type="text" maxlength="100" required name="foto" id="foto"><br><br>     
+                            
+                            <!--
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="file" name="foto" id="foto"><br><br>
+                            -->
+                        
+                            <label for="categoria" class="labels" style="text-align: left;">Categoria:</label>
+                            <select name="categoria" id="categoria">
+                                <option value="nessuna" selected>VUOTO</option>
+                                <option value="maglietta">maglietta</option>
+                                <option value="pantalone">pantalone</option>
+                                <option value="cappello">cappello</option>
+                                <option value="felpa">felpa</option>
+                                <option value="giacchetto">giacchetto</option>
+                            </select>  <br><br>
 
-                    <label for="descrizione" class="labels">Descrizione: </label>
-                    <textarea cols=20 rows="2" wrap="phisical" name="descrizione" id="descrizione"></textarea> <br><br>
+                            <label for="descrizione" class="labels">Descrizione: </label>
+                            <textarea cols=20 rows="2" wrap="phisical" name="descrizione" id="descrizione"></textarea> <br><br>
 
-                    <label for="prezzo" class="labels">Prezzo: </label>
-                    <input type="number" name="prezzo" id="prezzo" required> <br><br>
+                            <label for="prezzo" class="labels">Prezzo: </label>
+                            <input type="number" name="prezzo" id="prezzo" required> <br><br>
 
-                </sottotitolo>
+                        </sottotitolo>
 
-                <input type="reset" value="Reset"> &nbsp;&nbsp; 
-                <input type="submit" name="confirmButton" value="Conferma"> 
-            </p>
+                        <input type="reset" value="Reset"> &nbsp;&nbsp; 
+                        <input type="submit" name="confirmButton" value="Conferma"> 
+                    </p>
 
-        </form>
-        <p align="center">
-            <a href="../Home/homepage.php"><button>Torna Home</button></a> 
-        </p>
+                </form>
+                <p align="center">
+                    <a href="../Home/homepage.php"><button>Torna Home</button></a> 
+                </p>
+            </td>
+        </table>
     </body>
 
 </html>

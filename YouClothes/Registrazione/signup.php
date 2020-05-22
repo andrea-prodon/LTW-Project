@@ -48,12 +48,14 @@
     </head>
 
 
-    <body class="bordo">
-
+    <body class="bordo sfondo">
+    <br><br>
+    <table align="center" bgcolor="white">
+        <td>
         
         <form method="POST" action="../PHP files/registrazione.php" id="registrazione" name="registrazione" onSubmit="return validaForm()" enctype="multipart/form-data">
             <div class="titolo">
-                <p align="center"> <br><br>
+                <p align="center"> 
                     <titolo>Sign up</titolo><br><br>
                     <sottotitolo>
                         <label for="nome" class="labels">Nome: </label>
@@ -96,6 +98,9 @@
         <p align="center">
             <a href="../Home/homepage.php"><button>Torna Home</button></a> 
         </p>
+        </td>
+        </table>
+
     </body>
 
 </html>

@@ -28,9 +28,12 @@
                     </head>
                 
                 
-                    <body class=bordo>
+                    <body class='bordo sfondo'>
+                    <br><br><br><br>
+                    <table align='center' bgcolor='white'>
+                    <td>
                 
-                        <p align=center> <br><br><br><br>
+                        <p align=center> 
                             <titolo>Operazione Annullata! Questo Utente esiste già!</titolo> <br><br>
                             <sottotitolo>Clicca 
                             <a href=../Registrazione/login.php>QUI</a> 
@@ -39,7 +42,8 @@
                             <a href=../Registrazione/signup.php>QUI</a> 
                             per ri-effettuare la registrazione </sottotitolo> <br>
                         </p>
-                
+                    </td>
+                    </table>
                     </body>
                 
                 </html>";
@@ -56,9 +60,11 @@
                     </head>
                 
                 
-                    <body class=bordo>
-                
-                        <p align=center> <br><br><br><br>
+                    <body class='bordo sfondo'>
+                    <br><br><br><br>
+                    <table align='center' bgcolor='white'>
+                    <td>
+                        <p align=center> 
                             <titolo>Operazione Annullata! Questo nickname esiste già!</titolo> <br><br>
                             <sottotitolo>Clicca 
                             <a href=../Registrazione/login.php>QUI</a> 
@@ -70,7 +76,8 @@
                                 <a href=../Home/homepage.php>TORNA IN HOME</a>
                             </sottotitolo>
                         </p>
-                
+                    </td>
+                    </table>
                     </body>
                 
                 </html>";
