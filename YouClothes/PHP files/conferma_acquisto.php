@@ -101,7 +101,7 @@
                         <body class=bordo>
                     
                             <p align=center> <br><br><br><br>
-                                <titolo>Non puoi acquistare un annucio che tu hai creato!</titolo> <br><br><br><br>
+                                <titolo>Non puoi acquistare un annucio che tu stesso hai creato!</titolo> <br><br><br><br>
                                 <sottotitolo>
                                 <p align=center>
                                     <a href='../Home/homepage.php'><button> Torna Home</button> </a> &nbsp;&nbsp;&nbsp;

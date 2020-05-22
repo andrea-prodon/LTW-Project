@@ -34,6 +34,8 @@
                             
                             <label for="password" class="labels">Password</label>
                             <input type="Password" maxlength="20" name="password" id="password" required><br><br>
+
+                            
                             
                         </sottotitolo> 
                         <input type="reset" value="Reset"> &nbsp;&nbsp; 

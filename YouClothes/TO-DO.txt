@@ -1,15 +1,6 @@
-TODO: dopo aver provato ad acquistare, se ti manda nella pagina di ricarica saldo, 
-      subito dopo ti deve rimandare nella pagina dove stavi effettuando 
-      l'acquisto prima di scalarti i soldi;              
-      ----> RISOLTO  (ora funziona tutto ma ti rimanda alla home,  ho deciso di non modificare questa cosa
-                        perche richiederebbe troppi cazzi e non vale la pena, si puo comunque fare che dopo che hai caricato i soldi
-                        ti rimanda alla home e poi ti vai a ricomprare l'articolo, poi in caso ti spiego bene, comunque penso vada bene anche per te) ---> CI STA 
+TODO: fare il tasto "resta collegato" quando fai il login e salvi nella memoria di massa email e password di quello che 
+ha premuto resta collegato. Se non vuole più rimanere collegato allora elimina dalla memoria di massa;
 
-
-TODO: fare il tasto "resta collegato" quando fai il login e salvi nella memoria di massa email e password di quello che ha premuto resta gollegato. Se non vuole più rimanere collegato allora elimina 
-dalla memoria di massa;
-
-TODO : perchè quando premi su menù e ti appare il menù poi se lo ripremi non ti scompra ma devi per forza cliccare fuori;
 
 TODO : fare tutti gli isset per controllare che le pagine vengano richiamate solo in certi modi ovvero tipo ho il form che richiama a.php , questo file a.php può essere chiamato solo dalla form e non da altre cose;
 
