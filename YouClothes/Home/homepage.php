@@ -159,18 +159,8 @@
                     ?>
 
                     <!-- tasto cerca -->
-                    <span><input type="text" maxlength="30" placeholder="Cerca.." name="cerca" style="width: 100px;"></span>
+                    <li class="nav-item"><input type="text" maxlength="30" placeholder="Cerca.." name="cerca" style="width: 100px;"></li>
 
-                    <!--
-                        serie di spazi inserita soltanto per far apparire il login e sign up nella parte destra
-                        c'è sicuramente un altro modo piu corretto questa è soltanto una soluzione temporanea dato che
-                        al momento non sapevo come fare
-                    
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    -->
                     <?php
                         if(!isset($_SESSION["nickname"])){
                             echo "
@@ -196,16 +186,12 @@
                         }
                         else{
                             echo "
-
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                            ;
-
-                            <div class=nav-item align=right>
+                            <div class='nav-item' style='float: right' >
                                 <a class=nav-link href=../Registrazione/login.php>Login</a>
                             </div>
                             <span class=navbar-text>/</span>
 
-                            <div class=nav-item align=right>
+                            <div class='nav-item' style='float: right'>
                                 <a class=nav-link href=../Registrazione/signup.php>Sign up</a>
                             </div>
                             ";    
