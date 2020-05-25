@@ -255,11 +255,7 @@
                         $("#parteDinamica").load(''+url);
                     }
                     else{
-<<<<<<< HEAD
                         $("#parteDinamica").html("<sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
-=======
-                        $("#parteDinamica").html("<sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
->>>>>>> 47eaf881cdf222eaf9dd312581004e1a94adc90d
                     }
                 });
             });
