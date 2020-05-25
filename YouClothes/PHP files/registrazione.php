@@ -2,7 +2,7 @@
     <body>
         <?php
             session_start();    //serve sempre quando vuoi ricavare qualcosa dalla sessione (quindi lo devi inserire in tutte quelle pagine in cui vuoi accedere alla sessione)
-            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
             if(!(isset($_POST['registerButton']))){   //questa pagina può essere acceduta solo se prima si era sulla pagina di invio form
                 header('location: ../Home/homepage.php');

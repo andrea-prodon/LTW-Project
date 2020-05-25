@@ -1,3 +1,9 @@
+<?php
+    session_start();    //serve sempre quando vuoi ricavare qualcosa dalla sessione (quindi lo devi inserire in tutte quelle pagine in cui vuoi accedere alla sessione)
+    if(!isset($_SESSION["nickname"])){
+        header('location: ../Home/homepage.php');
+    }
+?>
 <html>
 
     <head>

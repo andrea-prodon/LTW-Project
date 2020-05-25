@@ -76,7 +76,7 @@
                                     Menù
                                     <span class='caret'></span>
                                 </a>
-                                
+                        
                                 <div class='dropdown-menu'  aria-labelledby='dropdown_target' id='dropdown_target'>
                                     <a class='dropdown-item' href='../ProfiloUtente/mioprofilo.php'>Il mio profilo</a>
                                     <a class='dropdown-item' href='../Saldo personale/caricasaldo.html'>Ricarica saldo utente</a>
@@ -269,7 +269,7 @@
                         $("#parteDinamica").load(''+url);
                     }
                     else{
-                        $("#parteDinamica").html("<br><br><br><sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo>");
+                        $("#parteDinamica").html("<sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
                     }
                 });
             });

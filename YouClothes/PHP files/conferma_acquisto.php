@@ -4,9 +4,12 @@
     
     <?php
         session_start();
-        $id_annuncio = $_GET["annuncio"];
+        if(!(isset($_POST['confirmButton']))){   //questa pagina può essere acceduta solo se prima si era sulla pagina di invio form
+            header('location: ../Home/homepage.php');
+        }
+        $id_annuncio = $_POST["annuncio"];
         $bool=0;
-        $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+        $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
         or die('Could not connect:' .pg_last_error());
         $email=$_SESSION["email"];
         
@@ -20,7 +23,7 @@
                 $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
                 $j=0;
                 $i=0;
-                $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+                $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
                 or die('Could not connect:' .pg_last_error());
                 $query = "SELECT * FROM annuncio where id='$id_annuncio'"; //query per ottenere la categoria prodotti scelta
                 $result = pg_query($query) or die('Query failed '.pg_last_error());
@@ -79,10 +82,15 @@
                                     <p align=center> 
                                         <titolo>Sei sicuro di voler procedere all'acquisto di questo annuncio?</titolo> <br><br><br><br>
                                         <sottotitolo>
-                                            <p align='center'>
-                                                <a href='../Home/homepage.php'><button> Annulla</button> </a> &nbsp;&nbsp;&nbsp;
-                                                <a href='acquisto.php?annuncio=$id_annuncio'><button>Conferma</button> </a>
-                                            </p>
+                                            <div align=center>
+                                                <form method='POST' action='acquisto.php'>
+                                                    <input type=hidden name='annuncio' value='$id_annuncio'>
+                                                    <input type='submit' name='confirmButton' value='Acquista'> &nbsp;&nbsp;&nbsp; 
+                                                </form>
+                                                <form action='../Home/homepage.php'>
+                                                    <input type='submit' name='Annulla' value='Annulla'>
+                                                </form>
+                                            </div>
                                         </sottotitolo>
                                     </p>
                                 </td>
@@ -107,7 +115,7 @@
                             <table bgcolor='white' align='center'>
                             <td>
                                 <p align='center'> 
-                                    <titolo>Non puoi acquistare un annucio che tu stesso hai creato!</titolo> <br><br><br><br>
+                                    <titolo>Non puoi acquistare un annuncio che tu stesso hai creato oppure che hai appena comprato!</titolo> <br><br><br><br>
                                     <sottotitolo>
                                     <p align='center'>
                                         <a href='../Home/homepage.php'><button> Torna Home</button> </a> &nbsp;&nbsp;&nbsp;

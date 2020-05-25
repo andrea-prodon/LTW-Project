@@ -2,7 +2,7 @@
 //per distruggere la sessione e quindi fare il logout
     session_start();
     if(isset($_SESSION['nickname'])){
-        header('location: ../CreaPost/creapost.html');
+        header('location: ../CreaPost/creapost.php');
     }
     echo "<html>
             <head>

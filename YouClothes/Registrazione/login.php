@@ -17,6 +17,28 @@
         <title>Login</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            function salvataggioInformazioni(){
+                if(document.getElementById("ricordami").checked){
+                    var email = document.getElementById("email").value;
+                    var pass = document.getElementById("password").value;
+                    localStorage.email = email;
+                    localStorage.pass = pass;
+                }
+                else{
+                    localStorage.removeItem("email");
+                    localStorage.removeItem("pass");
+                }
+            }
+            $(document).ready(function(){
+                if(localStorage.email!=null){
+                    $("#email").val(localStorage.email+'');
+                    $("#password").val(localStorage.pass+'');
+                    $("#email").css({"background-color": "yellow"});
+                    $("#password").css({"background-color": "yellow"});
+                }
+            });
+        </script>
     </head>
 
 
@@ -25,7 +47,7 @@
     <br><br><br><br><br><br>
         <table align="center" bgcolor="white">
             <td>
-                <form method="POST" name="login" action="../PHP files/login.php">
+                <form method="POST" name="login" action="../PHP files/login.php" onsubmit="salvataggioInformazioni();">
                     <div class="titolo">
 
                             <p align="center"> 
@@ -38,7 +60,7 @@
                                     <label for="password" class="labels">Password</label>
                                     <input type="Password" maxlength="20" name="password" id="password" required><br><br>
 
-
+                                    Ricordami &nbsp;&nbsp;<input title="La prossima volta verranno salvate le informazioni d'accesso" type="checkbox" id="ricordami" checked name="ricordami"><br><br>
                                     
                                 </sottotitolo> 
                                 <input type="reset" value="Reset"> &nbsp;&nbsp; 
