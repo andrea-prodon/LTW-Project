@@ -32,7 +32,7 @@ sottotitolo {
 
 .bordo {
     width: device-width;
-    
+    padding: 10px 20px;
     border: 50px solid transparent;
     border-color: rgb(52, 58, 64); ;
 }

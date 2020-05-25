@@ -269,7 +269,7 @@
                         $("#parteDinamica").load(''+url);
                     }
                     else{
-                        $("#parteDinamica").html("<br><br><br><sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo>");
+                        $("#parteDinamica").html("<sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
                     }
                 });
             });
