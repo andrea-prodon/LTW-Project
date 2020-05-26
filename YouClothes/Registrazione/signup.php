@@ -15,7 +15,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--piccola validazione del form che controlla che nome e cognome non siano numeri e che le due password corrispondano-->
+        <!-- validazione del form che controlla che nome e cognome non siano numeri e che le due password corrispondano-->
         <script type="text/javascript">
             function validaForm() {
                 var nameValue=parseInt(document.registrazione.nome.value);

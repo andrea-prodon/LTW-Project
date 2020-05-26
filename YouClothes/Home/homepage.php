@@ -69,15 +69,13 @@
                         if(isset($_SESSION["nickname"])){
                             echo "
                             <li class='nav-item dropdown'>
-                                <a class='nav-link dropdown-toggle' data-toggle='dropdown' data-target='#dropdown_target' href=#>
+                                <a class='nav-link dropdown-toggle' data-toggle='dropdown' data-target='#dropdown_target' href='#'>
                                     Menù
-                                    <span class='caret'></span>
                                 </a>
                         
                                 <div class='dropdown-menu'  aria-labelledby='dropdown_target' id='dropdown_target'>
                                     <a class='dropdown-item' href='../ProfiloUtente/mioprofilo.php'>Il mio profilo</a>
                                     <a class='dropdown-item' href='../Saldo personale/caricasaldo.html'>Ricarica saldo utente</a>
-                                    <!--<a class='dropdown-item'>Preferiti</a>-->
                                     <a class='dropdown-item' id='MieiAnnunci' href=#>I miei annunci</a> <!-- href=# per far apparire la manina del link -->
                                     <a class='dropdown-item' href='../PHP files/logout.php'>Logout</a>
                                 </div>
@@ -85,6 +83,8 @@
                             ";
                         }
                     ?>
+
+                    <!-- serie di spazi nel caso in cui il login non fosse stato effettuato, che stanno al posto del menu a tendina -->
                     <?php
                         if(!isset($_SESSION["nickname"])){
                             echo "
@@ -129,8 +129,9 @@
                         if(isset($_SESSION["nickname"])){
                             echo "
                             <div class=nav-item align=right>
-                            <a class=nav-link href=../ProfiloUtente/mioprofilo.php>Profilo: $_SESSION[nickname]</a>
+                                <a class=nav-link href=../ProfiloUtente/mioprofilo.php>Profilo: $_SESSION[nickname]</a>
                             </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                             <div class=nav-item align=right style=color:white>Saldo: $_SESSION[saldo] euro</div>";
                         }
                         else{
@@ -154,7 +155,6 @@
             </div>
         </nav>       
 
-        <!-- Da riempire un po per rendere piu bella esteticamente (in futuro)-->
         <div id="container" style="background-image: url('youclothes opaco 75.png')">
             <div id="parteDinamica"> <!-- inizio parte dinamica -->
                 <sottotitolo>Clicca sulle categorie per cominciare a navigare nel sito!</sottotitolo>
@@ -172,7 +172,7 @@
                         var url = "paginaAnnunci.php?nome=";
                         categoria = String(categoria);
                         url = url.concat(categoria);
-                        $("#parteDinamica").hide().load(''+url).fadeIn(650);    //effetto grafico
+                        $("#parteDinamica").hide().load(''+url).fadeIn(700);    //effetto grafico di fade in
                     },
                     mouseenter: function(){	//quando il mouse punta su questi elemento
                         $(this).css("background-color", "lightblue");
@@ -183,7 +183,7 @@
                 });
                 $("#MieiAnnunci").on({ //event handler concatenati
                     click:function(){
-                        $("#parteDinamica").load('../ProfiloUtente/paginaTuoiAnnunci.php');
+                        $("#parteDinamica").hide().load('../ProfiloUtente/paginaTuoiAnnunci.php').fadeIn(700);
                     }
                 });
                 $("input").keyup(function (){

@@ -9,7 +9,7 @@
      $q1 = "select * from utente where email=$1";  //il risultato della query viene inserito dentro $1
      $result = pg_query_params($dbconn,$q1,array($email));   //funzione per far effettuare le query e inserire i risultati dentro array (in questo caso solo 1: email)
      //controllo se utente con 'email'  non esiste
-     if(!($line=pg_fetch_array($result,null,PGSQL_ASSOC))){ //ovvero controllo che l'oggetto non esiste (not pg_fet...)
+     if(!($line=pg_fetch_array($result,null,PGSQL_ASSOC))){ //ovvero controllo che l'oggetto non esiste (not pg_fetch...)
         echo "<html>
 
                 <head>

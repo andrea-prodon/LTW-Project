@@ -16,6 +16,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
+        //per salvare le informazioni di email e password inserite nel caso l'utente abbia spuntato la casella ricordami
             function salvataggioInformazioni(){
                 if(document.getElementById("ricordami").checked){
                     var email = document.getElementById("email").value;
