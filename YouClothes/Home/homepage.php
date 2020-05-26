@@ -19,7 +19,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <!-- style="background-image: url(sfondo.jpeg)" -->     
     <body >
         <br>
         <!--titolo del sito-->
@@ -93,8 +92,9 @@
                         }
                     ?>
 
+                    &nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <button id="1" class="bottone" name="maglietta">Magliette</bottone> <!-- al click della categoria chiama la funzione all'interno della cartella /js/script_1.js -->
+                        <button id="1" class="bottone" name="maglietta">Magliette</bottone> 
                     </li>
                     <li class="nav-item">
                         <button id="6" class="bottone" name="pantalone">Pantaloni</bottone>
