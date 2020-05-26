@@ -135,12 +135,12 @@
                         }
                         else{
                             echo "
-                            <div class='nav-item' style='float: right' >
-                                <a class=nav-link href=../Registrazione/login.php>Login</a>
+                            <div class='nav-item' >
+                                <a class=nav-link href=../Registrazione/login.php> Login </a>
                             </div>
                             <span class=navbar-text>/</span>
 
-                            <div class='nav-item' style='float: right'>
+                            <div class='nav-item' >
                                 <a class=nav-link href=../Registrazione/signup.php>Sign up</a>
                             </div>
                             ";    
