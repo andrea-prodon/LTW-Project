@@ -10,9 +10,7 @@
     <head>
         <link rel="stylesheet" href="../stile.css" type="text/css">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
 
         <title>Login</title>
         <meta charset="utf-8">

@@ -44,7 +44,7 @@
     }
     if (isset($_SESSION["nickname"])) {
         $nickname=$_SESSION["nickname"];
-        $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+        $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
         or die('Could not connect: '.pg_last_error());
         $q1 = "select * from utente where nickname=$1";
         $result = pg_query_params($dbconn,$q1,array($nickname));
@@ -62,7 +62,7 @@
         <html>
 
         <head>
-            <link rel=stylesheet href=../stile.css type=text/css>
+            <link rel='stylesheet' href='../stile.css' type=text/css>
             <script src=https://code.jquery.com/jquery-2.1.3.min.js></script>
             <title>Profilo personale</title>
             <meta charset=utf-8>

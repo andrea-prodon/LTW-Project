@@ -3,10 +3,8 @@
     <head>
         <link rel="stylesheet" href="../stile.css" type="text/css">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
-        <!--<script src="../js/script_1.js"></script>-->
 
         <!-- link agli script jquery (online) -->
         <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
@@ -95,33 +93,6 @@
                         }
                     ?>
 
-                    <!--altri link contenuti nella nav dopo il tasto dropdown-->
-                    <!--Ho commentato perchè con Ajax bastano i bottoni, nel caso sentiamoci
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Magliette</a>
-                    </li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pantaloni</a>
-                    </li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cappelli</a>
-                    </li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Felpe</a>
-                    </li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sciarpe</a>
-                    </li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Giacchetti</a>
-                    </li>
-                    onclick="return caricaDocumentoMaglietta();"
-                    -->
                     <li class="nav-item">
                         <button id="1" class="bottone" name="maglietta">Magliette</bottone> <!-- al click della categoria chiama la funzione all'interno della cartella /js/script_1.js -->
                     </li>
@@ -140,40 +111,18 @@
                     <li class="nav-item">
                         <button id="5" class="bottone" name="giacchetto">Giacchetti</bottone>
                     </li>
-                    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                    
+                   
 
                     <li class="nav-item">
                         <a class="nav-link" href="../PHP files/controllo_creaPost.php">Crea annuncio</a>
                     </li>
-                    <?php
-                        if(!isset($_SESSION["nickname"])){
-                            echo "
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-                        }
-                        else{
-                            echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-                        }
-                    ?>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     <!-- tasto cerca -->
-                    <li class="nav-item"><input type="text" maxlength="30" placeholder="Cerca.." name="cerca" style="width: 100px;"></li>
+                    <li class="nav-item"><input type="text" maxlength="30" class="labels" placeholder="Cerca.." name="cerca" style="width: 100px;"></li>
 
-                    <?php
-                        if(!isset($_SESSION["nickname"])){
-                            echo "
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-                        }
-                        else{
-                            echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-                        }
-                    ?>
-                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    
 
                     <?php
                         //questa parte serve per far apparire o login/signup in caso non è stato effettuato l'accesso oppure il nickname di colui che ha effettuato l'accesso
@@ -199,16 +148,7 @@
                     
                     ?>
 
-                    <!-- questa parte è stata sostuita da quella sopra-->
-                    <!--e qui i link di login e sign up
-                    <div class="nav-item" align="right">
-                        <a class="nav-link" href="../Registrazione/login.html">Login</a>
-                    </div>
-                    <span class="navbar-text">/</span>
-
-                    <div class="nav-item" align="right">
-                        <a class="nav-link" href="../Registrazione/signup.html">Sign up</a>
-                    </div>-->
+    
 
                 </ul>
             </div>

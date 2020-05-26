@@ -9,7 +9,7 @@
             $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
             $j=0;
             $i=0;
-            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect:' .pg_last_error());
             $query1 = "SELECT disponibile FROM annuncio where proprietario='$email'";   //questa query serve per vedere quali annunci non sono più disponibile dell'utente attuale e quindi sono stati acquistati
             $result1=pg_query($query1) or die('Query failed '.pg_last_error());

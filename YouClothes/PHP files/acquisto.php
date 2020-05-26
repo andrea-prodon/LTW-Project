@@ -9,7 +9,7 @@
         if(isset($_SESSION["nickname"])){
             $email=$_SESSION["email"];
             $id_annuncio = $_POST["annuncio"]; //ottengo l'id dell'annuncio che è stato cliccato dalla get dell'url
-            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
 
             
@@ -58,7 +58,7 @@
                     echo "<html>
                     
                     <head>
-                    <link rel=stylesheet href=../stile.css type=text/css>
+                    <link rel='stylesheet' href='../stile.css' type=text/css>
                     <title>Acquisto effettuato</title>
                     <meta charset=utf-8>
                     <meta name=viewport content=width=device-width, initial-scale=1>
@@ -94,7 +94,7 @@
                 echo "<html>
 
                     <head>
-                        <link rel=stylesheet href=../stile.css type=text/css>
+                        <link rel='stylesheet' href='../stile.css' type=text/css>
                         <title>Saldo insufficiente</title>
                         <meta charset=utf-8>
                         <meta name=viewport content=width=device-width, initial-scale=1>
@@ -130,7 +130,7 @@
         else {
             echo "<html>
                     <head>
-                        <link rel=stylesheet href=../stile.css type=text/css>
+                        <link rel='stylesheet' href='../stile.css' type=text/css>
                         <title>ERRORE</title>
                         <meta charset=utf-8>
                         <meta name=viewport content=width=device-width, initial-scale=1>

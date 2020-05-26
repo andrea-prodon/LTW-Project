@@ -1,6 +1,4 @@
 <html>
-    <head><link rel="stylesheet" href="../stile.cc"></head>
-<body class="bordo sfondo">
     
     <?php
         session_start();
@@ -9,7 +7,7 @@
         }
         $id_annuncio = $_POST["annuncio"];
         $bool=0;
-        $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+        $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
         or die('Could not connect:' .pg_last_error());
         $email=$_SESSION["email"];
         
@@ -23,7 +21,7 @@
                 $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
                 $j=0;
                 $i=0;
-                $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+                $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
                 or die('Could not connect:' .pg_last_error());
                 $query = "SELECT * FROM annuncio where id='$id_annuncio'"; //query per ottenere la categoria prodotti scelta
                 $result = pg_query($query) or die('Query failed '.pg_last_error());
@@ -68,7 +66,7 @@
                 echo "<html>
     
                         <head>
-                            <link rel=stylesheet href=../stile.css type=text/css>
+                            <link rel='stylesheet' href='../stile.css' type=text/css>
                             <title>Saldo caricato</title>
                             <meta charset=utf-8>
                             <meta name=viewport content=width=device-width, initial-scale=1>
@@ -80,12 +78,12 @@
                             <table align='center' bgcolor='white'>
                                 <td>
                                     <p align=center> 
-                                        <titolo>Sei sicuro di voler procedere all'acquisto di questo annuncio?</titolo> <br><br><br><br>
+                                        <titolo>Sei sicuro di voler procedere all'acquisto di questo annuncio?</titolo> <br><br>
                                         <sottotitolo>
                                             <div align=center>
                                                 <form method='POST' action='acquisto.php'>
                                                     <input type=hidden name='annuncio' value='$id_annuncio'>
-                                                    <input type='submit' name='confirmButton' value='Acquista'> &nbsp;&nbsp;&nbsp; 
+                                                    <input type='submit' name='confirmButton' value='Acquista'> 
                                                 </form>
                                                 <form action='../Home/homepage.php'>
                                                     <input type='submit' name='Annulla' value='Annulla'>
@@ -103,7 +101,7 @@
                 echo "<html>
     
                         <head>
-                            <link rel=stylesheet href=../stile.css type=text/css>
+                            <link rel='stylesheet' href='../stile.css' type=text/css>
                             <title>Saldo caricato</title>
                             <meta charset=utf-8>
                             <meta name=viewport content=width=device-width, initial-scale=1>
@@ -133,7 +131,7 @@
 
             echo "<html>
             <head>
-                <link rel=stylesheet href=../stile.css type=text/css>
+                <link rel='stylesheet' href='../stile.css' type=text/css>
                 <title>ERRORE</title>
                 <meta charset=utf-8>
                 <meta name=viewport content=width=device-width, initial-scale=1>

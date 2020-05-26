@@ -7,7 +7,7 @@
                 header('location: ../Home/homepage.php');
             }
 
-            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
             
             $importo = $_POST['importo'];   //prendo il parametro 'importo' della form inviata
@@ -34,7 +34,7 @@
                     echo "<html>
 
                     <head>
-                        <link rel=stylesheet href=../stile.css type=text/css>
+                        <link rel='stylesheet' href='../stile.css' type=text/css>
                         <title>Saldo caricato</title>
                         <meta charset=utf-8>
                         <meta name=viewport content=width=device-width, initial-scale=1>
