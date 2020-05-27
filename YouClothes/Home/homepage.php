@@ -4,10 +4,7 @@
         <link rel="stylesheet" href="../stile.css" type="text/css">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-
-        <!-- link agli script jquery (online) -->
-        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="../js/bootstrap.min.js"></script>      
 
         <?php
             //inizio sessione

@@ -70,7 +70,7 @@
                         </head>
                     
                     
-                        <body class='bordo sfondo'>
+                        <body class='sfondo bordo'>
                         <br><br><br><br>
                             <table align='center' bgcolor='white'>
                                 <td>
