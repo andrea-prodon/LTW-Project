@@ -10,7 +10,7 @@
             $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
             $j=0;
             $i=0;
-            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect:' .pg_last_error());
             $query = "SELECT * FROM annuncio where descrizione ilike '%$descrizione%' and disponibile=true"; //cerca tra gli annunci , quelli che hanno all'interno di descrizione almeno la parola immessa sul tasto cerca (ilike è noncasesensitive)
             $result = pg_query($query) or die('Query failed '.pg_last_error());
