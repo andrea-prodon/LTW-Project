@@ -44,9 +44,9 @@
                 <form method="POST" action="../PHP files/creapost.php" id="creazionepost" name="creazionepost" enctype="multipart/form-data"  onSubmit="return valida()">
                     <p align="center">
                         <sottotitolo> 
-                            Si inseriscano per favore informazioni relative alla taglia e alla marca <br>
-                            del prodotto all'interno della descrizione <br>
-                            grazie mille <br><br><br>
+                            Si inseriscano per favore informazioni relative alla taglia e alla <br>
+                            marca del prodotto all'interno della descrizione <br>
+                            Grazie mille <br><br><br>
 
                             <label for="foto" class="labels" >Foto:</label>
                             <input type="text" maxlength="100" required name="foto" id="foto"><br><br>     

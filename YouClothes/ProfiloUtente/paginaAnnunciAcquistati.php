@@ -13,7 +13,7 @@
             or die('Could not connect:' .pg_last_error());
             $query = "SELECT * FROM annuncio where utente_email='$email' and disponibile=false"; //query per ottenere gli annunci acquistati dall'utente attuale
             $result = pg_query($query) or die('Query failed '.pg_last_error());
-            //Iniziamo a printare i dati prelevati dal DB
+            //Iniziamo a stampare i dati prelevati dal DB
             echo "<table align='center' bgcolor='white'>\n";   //creo tabella che al suo interno conterrà tutti gli annunci richiesti
             $indice = 0; //mi serve per sapere a che linea sono nello scorrimento degli annunci nel while
             while ($line = pg_fetch_array($result,null,PGSQL_ASSOC)) {  //dentro a questo while creo righe della tabella in base a quanti annunci della categoria richiesta sono presenti
