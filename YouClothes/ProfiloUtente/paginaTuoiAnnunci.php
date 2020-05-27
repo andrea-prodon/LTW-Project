@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../stile.cc">
+        <link rel="stylesheet" href="../stile.css">
     </head>
     <body>
         <?php
