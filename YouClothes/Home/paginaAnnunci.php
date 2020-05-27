@@ -42,7 +42,7 @@
                         $i=$i+1;
                     }
                 }
-                echo "<tr><td><span style=color:lime;>DISPONIBILE</span></td></tr>"; //da cambiare ovvero vedere se veramente è disponibile o no 
+                echo "<tr><td><span style=color:lime;>DISPONIBILE</span></td></tr>"; 
                 
                 echo "<tr><td>
                 <input type='hidden' name='annuncio' value='$annuncio'>
