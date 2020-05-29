@@ -6,13 +6,14 @@
         $bool=0;
         $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
         or die('Could not connect:' .pg_last_error());
-        $email=$_SESSION["email"];
-        
-        //in questa query controlli l'id dell'annuncio che stai comprando e l'email dell'utente attualmente loggato. Se a tale utente corrisponde tale id vuol dire che l'annuncio è suo 
-        $query="select id from annuncio where utente_email='$email' and id=$id_annuncio";   //controllo che non si sta comprando un annuncio che tu stesso hai pubblicato
-        
-        $result = pg_query($query) or die('Query failed '.pg_last_error());
-        $line=pg_fetch_array($result,null,PGSQL_ASSOC); //true se la query ha dato risultati, false altrimenti. nel caso true allora vuol dire che c'è stata una corrispondenza tra id e annuncio quindi era sua, altrimenti non era suo
+        if(isset($_SESSION["email"])){
+            $email=$_SESSION["email"];
+            //in questa query controlli l'id dell'annuncio che stai comprando e l'email dell'utente attualmente loggato. Se a tale utente corrisponde tale id vuol dire che l'annuncio è suo 
+            $query="select id from annuncio where utente_email='$email' and id=$id_annuncio";   //controllo che non si sta comprando un annuncio che tu stesso hai pubblicato
+            
+            $result = pg_query($query) or die('Query failed '.pg_last_error());
+            $line=pg_fetch_array($result,null,PGSQL_ASSOC); //true se la query ha dato risultati, false altrimenti. nel caso true allora vuol dire che c'è stata una corrispondenza tra id e annuncio quindi era sua, altrimenti non era suo
+        }
         if(isset($_SESSION["nickname"])){
             if(!$line){ //appunto se non è un annuncio tuo, allora prosegui
                 $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
