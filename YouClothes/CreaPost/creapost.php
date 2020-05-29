@@ -23,6 +23,10 @@
                     alert("Inserisci una categoria!");
                     return false;
                 }
+                if(document.getElementById("prezzo").value<1){
+                    alert("Inserisci un importo maggiore di zero!");
+                    return false;
+                }
                 return true;
             }
         </script>

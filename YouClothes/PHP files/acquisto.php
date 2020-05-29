@@ -9,7 +9,7 @@
         if(isset($_SESSION["nickname"])){
             $email=$_SESSION["email"];
             $id_annuncio = $_POST["annuncio"]; //ottengo l'id dell'annuncio che è stato cliccato dalla get dell'url
-            $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+            $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
             or die('Could not connect: '.pg_last_error());
 
             

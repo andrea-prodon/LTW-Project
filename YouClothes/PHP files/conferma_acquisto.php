@@ -4,7 +4,7 @@
         session_start();
         $id_annuncio = $_GET["annuncio"];
         $bool=0;
-        $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+        $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
         or die('Could not connect:' .pg_last_error());
         if(isset($_SESSION["email"])){
             $email=$_SESSION["email"];
@@ -19,7 +19,7 @@
                 $vettore=['CATEGORIA','DESCRIZIONE','PREZZO'];  //vettore puramente utlizzato per stampare a livello visuale
                 $j=0;
                 $i=0;
-                $dbconn = pg_connect("host=localhost port=5432 dbname=YouClothes user=postgres password=edoardo97")
+                $dbconn = pg_connect("host=localhost port=5433 dbname=YouClothes user=postgres password=edoardo97")
                 or die('Could not connect:' .pg_last_error());
                 $query = "SELECT * FROM annuncio where id='$id_annuncio'"; //query per ottenere la categoria prodotti scelta
                 $result = pg_query($query) or die('Query failed '.pg_last_error());

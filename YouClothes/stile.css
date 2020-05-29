@@ -2,7 +2,7 @@ titolo {
     font-weight: 600;
     font-size: 50;
     color: rgb(52, 58, 64);         
-    font-family: fantasy;
+    font-family: Arial Bold;
 }
 
 .bottone {
@@ -22,7 +22,7 @@ sottotitolo {
     font-weight: 300;
     font-size: 20;
     color: rgb(52, 58, 64); 
-    font-family: fantasy;
+    font-family: Arial Bold;
 }
 
 
