@@ -73,7 +73,7 @@
                         <p align=center> 
                             <titolo>Acquisto effettuato con successo!</titolo> <br><br><br><br>
                             <sottotitolo>L'articolo ti verrà spedito entro 7 giorni lavorativi </sottotitolo> <br>
-                            <sottotitolo>Grazie mille di aver acquistato su YouClothes! </sottotitolo> <br><br><br>
+                            <sottotitolo>Grazie mille per aver acquistato su YouClothes! </sottotitolo> <br><br><br>
                             <sottotitolo>
                                 Saldo precedente: $saldoutente <br>
                                 Costo articolo: $prezzo <br>
